@@ -7299,7 +7299,7 @@ h1, h2, h3, h4, h5,
     padding-bottom: 30px;
     padding-left: 20px;
     padding-right: 20px;
-    color: #f8fcfd;
+    color: #000000;
     opacity: 1 !important; }
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
     color: #fff; }
@@ -8846,4 +8846,8 @@ textarea.form-control {
         stroke-dashoffset: -35px; }
     100% {
         stroke-dasharray: 89, 200;
+
         stroke-dashoffset: -136px; } }
+a .nav-link{
+    color: black;
+}

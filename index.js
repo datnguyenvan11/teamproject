@@ -12,6 +12,9 @@ app.use(express.static('public'));
 app.get("/home", function (req, res) {
     res.render("client/contentHomePage.ejs");
 });
+app.get("/detail", function (req, res) {
+    res.render("client/contentDetailTour.ejs");
+});
 app.listen( 9999, function () {
     console.log("Chay thanh cong");
 });
