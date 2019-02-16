@@ -8,10 +8,39 @@
     <title>Document</title>
 </head>
 <body>
-
-<form action="">
-    Tên tour<input type="text" name="nameTour">
-    Giá tour<input type="text" name="price">
+<h1>Tạo tour</h1>
+<form action="/register" method="post">
+    <div>Tên tour <input type="text" name="tourName"></div>
+    <div>Ngày đi<input type="date" name="tourDayGo"></div>
+    <div>Ngày về <input type="date" name="tourDayBack"></div>
+    <div>Tổng số ngày <input type="number" name="tourTotalDay"></div>
+    <div>Nơi khởi hành <input type="text" name="tourStartingGate"></div>
+    <div>Số chỗ <input type="number" name="tourNumberOfSeats"></div>
+    <div>Giá <input type="number" name="tourPrice"></div>
+    <div>Giá khuyến mãi<input type="number" name="tourPricePromotion"></div>
+    <p>Thông tin chuyến bay</p>
+    <div>Ngày đi<input type="date" name="tourDateGo"></div>
+    <div>Đến<input type="date" name="tourDateGoCome"></div>
+    <div>Chuyến bay<input type="text" name="tourGoFlight"></div>
+    <div>Hãng bay<input type="text" name="tourGoAirline"></div>
+    <div>Ngày về<input type="date" name="tourDateReturn"></div>
+    <div>Đến<input type="date" name="tourDateReturnCome"></div>
+    <div>Chuyến bay<input type="text" name="tourReturnFlight"></div>
+    <div>Hãng bay<input type="text" name="tourReturnAirline"></div>
+    <p>Thông tin hướng dẫn viên</p>
+    <div>Tên <input type="text" name="tourGuideName"></div>
+    <div>Địa chỉ <textarea name="tourGuideAddress" id="" cols="30" rows="10"></textarea></div>
+    <div>Số điện thoại <input type="tel" name="tourGuideTel"></div>
+    <p>Thông tin tập trung</p>
+    <div>Ngày giờ tập trung<input type="date" name="tourFocusDay"></div>
+    <div>Nơi tập trung <input type="text" name="tourConcentratedPlace"></div>
+    <div>Nơi họp đoàn <input type="text" name="tourMeetingPlace"></div>
+    <p>Lưu ý</p>
+    <div>lưu ý <textarea name="tourNote" id="" cols="30" rows="10"></textarea></div>
+    <div>
+        <input type="submit" value="Lưu">
+        <input type="reset" value="Nhập lại">
+    </div>
 </form>
 
 </body>

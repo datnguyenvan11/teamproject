@@ -1,20 +1,22 @@
+//require express, router, body-parser, mongoose, ...
 const express = require("express");
-const bodyParser = require("body-parser");
 const app = express();
+const router = require("./routes/appRouter");
+const bodyParser = require("body-parser");
+const mongoose = require('mongoose');
+const mongoDb = "mongodb://sa:abcd1234@ds159641.mlab.com:59641/shop";
+var port = process.env.PORT || 9999;
+//connect mongo
+mongoose.connect(mongoDb, {useNewUrlParser: true});
+//set view, use body-parser
 app.set("views", "views");
 app.set("views engine", "ejs");
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use(express.static('public'));
-
-// var router = require("./router/applicationRouter.js");
-// router.routing(app);
-
-app.get("/home", function (req, res) {
-    res.render("client/contentHomePage.ejs");
-});
-app.get("/detail", function (req, res) {
-    res.render("client/contentDetailTour.ejs");
-});
-app.listen( 9999, function () {
-    console.log("Chay thanh cong");
+//routing
+router.routing(app);
+//listen
+app.listen(port, function () {
+    console.log("Run success!");
 });
