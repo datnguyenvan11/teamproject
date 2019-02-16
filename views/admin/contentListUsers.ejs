@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Danh sách người dùng</h1>
+<ul>
+    <% for (var i = 0; i < list.length; i++){ %>
+        <li>
+            <div>Họ: <%= list[i].firstName %></div>
+            <div>Tên: <%= list[i].lastName %></div>
+            <div>Email: <%= list[i].email %></div>
+            <div>Ngày sinh: <%= list[i].dateOfBirth %></div>
+            <div>Số điện thoại: <%= list[i].tell %></div>
+            <div>Địa chỉ: <%= list[i].address %></div>
+        </li>
+    <% } %>
+</ul>
+</body>
+</html>
