@@ -1,19 +1,15 @@
 .img-introduce {
-    margin-top: 15px;
-    width: 350px;
-    margin-left: 25px;
 
 }
 
+
 .title-1 {
     color: #c2511a;
-    margin-top: 15px;
-    margin-left: -100px;
     border: black;
 }
 
 .text {
-    margin-left: -100px;
+
     color: rgba(74, 79, 95, 0.85);
 }
 
@@ -25,13 +21,13 @@
 }
 
 .img-box {
-    width: 350px;
-    height: 250px;
-    margin-left: 25px;
+    width: 100%;
+    height: 190px;
+
 }
 
 .text-word {
-    margin-left: 25px;
+
     margin-top: 7px;
 }
 
@@ -115,3 +111,28 @@
     color: white;
     margin-top: 7px;
 }
+.box-1{
+    background-color: white;
+
+}
+.box-1 h5{
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+.box-1  {
+    display:block;
+    position:relative;
+    -webkit-transition:all .4s linear;
+    transition:all .4s linear;
+}
+
+
+.box-1:hover {
+    -ms-transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+}
+
