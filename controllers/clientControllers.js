@@ -15,6 +15,8 @@ exports.generateRegister = function (req, res) {
     res.render("client/contentRegister.ejs")
 };
 
+
+
 exports.processRegister = function (req, res) {
     var user = new userModel({
         firstName: req.body.firstName,
