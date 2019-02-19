@@ -8874,3 +8874,6 @@ input{
 .dada{
     position: fixed;
 }
+.error{
+    color: red;
+}
