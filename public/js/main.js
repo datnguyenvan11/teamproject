@@ -417,4 +417,23 @@ AOS.init({
 
 })(jQuery);
 
+var modal = document.getElementById('myModal');
 
+var img = document.getElementById('img-play');
+var modalImg = document.getElementById("img01");
+
+
+img.onclick = function(){
+
+    modal.style.display = "block";
+    modalImg.src =src;
+}
+
+var span1 = document.getElementsByClassName("close")[0];
+
+span1.onclick = function( ) {
+    modal.style.display = "none";
+          modalImg.src=stop();
+
+
+ }
