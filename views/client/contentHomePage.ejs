@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    -->
     <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="/css/animate.css">
@@ -18,7 +20,7 @@
     <link rel="stylesheet" href="/css/flaticon.css">
     <link rel="stylesheet" href="/css/icomoon.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/home2.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat&subset=vietnamese');
@@ -31,9 +33,10 @@
             color: white;
         }
 
-        .nav-link:hover {
-            border-bottom: 2px solid black;
+        .active {
+            border-bottom: 2px solid #69abdc;
         }
+
     </style>
 
 </head>
@@ -43,21 +46,21 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="index.html"
-           style=" color: #e36921;font-size: 25px;font-family:-apple-system">Pleasant Tour
+           style=" color: #e36921;font-size: 25px;font-family:-apple-system"> Pleasant Tour
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
+            <span class=""></span> Menu
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active "><a href="index.html" class="nav-link" style="color: white">Home</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Tours trong nước</a></li>
-                <li class="nav-item"><a href="./index.html/jan-tour.html" class="nav-link">Tours nước ngoài</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item active "><a href="/" class="nav-link" style="color: white">Trang chủ </a>
+                </li>
+                <li class="nav-item"><a href="" class="nav-link">Tours</a></li>
+                <li class="nav-item"><a href="/dichvu" class="nav-link">Dịch vụ</a></li>
                 <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="/lienhe" class="nav-link">Liên hệ </a></li>
             </ul>
         </div>
     </div>
@@ -103,15 +106,9 @@
         <div class="row">
             <div class="col-md-12 tabulation-search">
                 <div class="element-animate">
-                    <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div class="nav nav-pills mt-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <a class="nav-link p-3 active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-                           role="tab" aria-controls="v-pills-home" aria-selected="true">Tour trong nước</a>
-                        <a class="nav-link p-3" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
-                           role="tab" aria-controls="v-pills-profile" aria-selected="false">Tour nước ngoài</a>
-                        <a class="nav-link p-3" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
-                           role="tab" aria-controls="v-pills-messages" aria-selected="false">Tour tự chọn</a>
-                        <a class="nav-link p-3" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
-                           role="tab" aria-controls="v-pills-settings" aria-selected="false">Dịch vụ</a>
+                           role="tab" aria-controls="v-pills-home" aria-selected="true">Tìm kiếm Tour</a>
                     </div>
                 </div>
                 <div class="tab-content py-5" id="v-pills-tabContent">
@@ -143,134 +140,47 @@
                             </form>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                         aria-labelledby="v-pills-profile-tab">
-                        <div class="block-17">
-                            <form action="" method="post" class="d-block d-lg-flex">
-                                <div class="fields d-block d-lg-flex">
-                                    <div class="textfield-search one-third"><input type="text" class="form-control"
-                                                                                   placeholder="Tìm địa điểm đến"></div>
-                                    <div class="check-in one-third"><input type="text" id="checkin_date"
-                                                                           class="form-control"
-                                                                           placeholder="Check-in date"></div>
-                                    <div class="check-out one-third"><input type="text" id="checkout_date"
-                                                                            class="form-control"
-                                                                            placeholder="Check-out date"></div>
-                                    <div class="select-wrap one-third">
-                                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                        <select name="" id="checkin" class="form-control">
-                                            <option value="">Số người</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4+</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <input type="submit" class="search-submit btn btn-primary" value="Tìm kiếm">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                         aria-labelledby="v-pills-messages-tab">
-                        <div class="block-17">
-                            <form action="" method="post" class="d-block d-lg-flex">
-                                <div class="fields d-block d-lg-flex">
-                                    <div class="textfield-search one-third"><input type="text" class="form-control"
-                                                                                   placeholder="Tìm kiếm địa điểm">
-                                    </div>
-                                    <div class="check-in one-third"><input type="text" id="startdate"
-                                                                           class="form-control"
-                                                                           placeholder="Check-in date "></div>
-                                    <div class="check-out one-third"><input type="text" id="return_date"
-                                                                            class="form-control"
-                                                                            placeholder="Check-out date"></div>
-                                    <div class="select-wrap one-third">
-                                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                        <select name="" id="menu" class="form-control">
-                                            <option value="">Số người</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4+</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <input type="submit" class="search-submit btn btn-primary" value="Tìm kiếm">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-                         aria-labelledby="v-pills-settings-tab">
-                        <div class="block-17">
-                            <form action="" method="post" class="d-block d-lg-flex">
-                                <div class="fields d-block d-lg-flex">
-                                    <div class="textfield-search one-third one-third-1"><input type="text"
-                                                                                               class="form-control"
-                                                                                               placeholder="Tìm kiếm dịch vụ">
-                                    </div>
-                                    <div class="select-wrap one-third one-third-1">
-                                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                        <select name="" class="form-control">
-                                            <option value="">Khách sạn</option>
-                                            <option value="">3 sao</option>
-                                            <option value="">4 sao</option>
-                                            <option value="">5 sao</option>
-                                        </select>
-                                    </div>
-                                    <div class="select-wrap one-third one-third-1">
-                                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Xe hơi</option>
-                                            <option value="">4 chỗ</option>
-                                            <option value="">7 chỗ</option>
-                                            <option value="">19 chỗ</option>
-                                            <option value="">26 chỗ</option>
-                                            <option value="">32 chỗ</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <input type="submit" class="search-submit btn btn-primary" value="Tìm kiếm">
-                            </form>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container mt-5">
-    <div class="row ">
-        <div class="col-lg-4">
-            <img width="100%" height="80%" class="img-introduce"
-                 src="https://travel.com.vn/Images/destination/1909131015-Travel%20220x145.jpg" alt="">
-        </div>
-        <div class="col-lg-8">
-            <h3 class="title-1">Du lịch thả ga</h3>
-            <hr width="112%" align="left" style=" color: black"/>
-            <p class="text">Pleasant l&agrave; c&ocirc;ng ty lữ h&agrave;nh số 1 Việt Nam, chuy&ecirc;n tổ chức c&aacute;c
-                tour du lịch nước ngo&agrave;i, với gần 1.000 tuyến khắp 5 ch&acirc;u. Bạn sẽ c&oacute; dịp kh&aacute;m
-                ph&aacute; những miền đất mới tại c&aacute;c nước Đ&ocirc;ng Nam &Aacute;, Ch&acirc;u &Aacute;, ch&acirc;u
-                &Acirc;u, &Uacute;c, Mỹ, hay kh&aacute;m ph&aacute; những v&ugrave;ng đất Ch&acirc;u Phi xa x&ocirc;i...
-                Với lịch tr&igrave;nh d&agrave;y, khởi h&agrave;nh đ&uacute;ng thời gian cam kết, Vietravel l&agrave; c&ocirc;ng
-                ty lữ h&agrave;nh uy t&iacute;n nhất hiện nay tại Việt Nam, lu&ocirc;n sẵn s&agrave;ng phục vụ du kh&aacute;ch
-                mọi l&uacute;c, mọi nơi, đảm bảo t&iacute;nh chuy&ecirc;n nghiệp v&agrave; chất lượng dịch vụ tốt nhất
-                thị trường.<br/><br/><br/><br/></p>
-        </div>
 
-    </div>
+<!--<div class="container mt-5">-->
+<!--<div class="row ">-->
+<!--<div class="col-lg-4">-->
+<!--<img width="100%" height="80%" class="img-introduce"-->
+<!--src="https://travel.com.vn/Images/destination/1909131015-Travel%20220x145.jpg" alt="">-->
+<!--</div>-->
+<!--<div class="col-lg-8">-->
+<!--<h3 class="title-1">Du lịch thả ga</h3>-->
+<!--<hr width="112%" align="left" style=" color: black"/>-->
+<!--<p class="text">Pleasant l&agrave; c&ocirc;ng ty lữ h&agrave;nh số 1 Việt Nam, chuy&ecirc;n tổ chức c&aacute;c-->
+<!--tour du lịch nước ngo&agrave;i, với gần 1.000 tuyến khắp 5 ch&acirc;u. Bạn sẽ c&oacute; dịp kh&aacute;m-->
+<!--ph&aacute; những miền đất mới tại c&aacute;c nước Đ&ocirc;ng Nam &Aacute;, Ch&acirc;u &Aacute;, ch&acirc;u-->
+<!--&Acirc;u, &Uacute;c, Mỹ, hay kh&aacute;m ph&aacute; những v&ugrave;ng đất Ch&acirc;u Phi xa x&ocirc;i...-->
+<!--Với lịch tr&igrave;nh d&agrave;y, khởi h&agrave;nh đ&uacute;ng thời gian cam kết, Vietravel l&agrave;-->
+<!--c&ocirc;ng-->
+<!--ty lữ h&agrave;nh uy t&iacute;n nhất hiện nay tại Việt Nam, lu&ocirc;n sẵn s&agrave;ng phục vụ du kh&aacute;ch-->
+<!--mọi l&uacute;c, mọi nơi, đảm bảo t&iacute;nh chuy&ecirc;n nghiệp v&agrave; chất lượng dịch vụ tốt-->
+<!--nhất-->
+<!--thị trường.<br/><br/><br/><br/></p>-->
+<!--</div>-->
 
-</div>
+<!--</div>-->
+
+<!--</div>-->
 
 <div class="row " style="  margin-left: 1% ;
-    margin-right: 1%;margin-top: 7%">
+    margin-right: 1%;margin-top: 7%;">
     <div class="col-lg-12" style="border-bottom: 1px solid orange">
         <h3 class="title-2">Khám phá những địa điểm tốt nhất ở Việt Nam</h3>
 
     </div>
 
 
-    <div class="box-1 col-lg-3 mt-3">
+    <div class="box-1 col-lg-3 mt-4">
 
         <img class=" img-box" src="https://travel.com.vn/Images/tour/tfd_170904115223_073780.jpg" alt="">
 
@@ -278,21 +188,21 @@
 
     </div>
 
-    <div class="box-1 col-lg-3 mt-3">
+    <div class="box-1 col-lg-3 mt-4">
         <img class="img-box" src="https://znews-photo.zadn.vn/w660/Uploaded/jac_iik/2014_08_08/20_1.jpg" alt="">
         <h5 class="text-word">Vịnh Hạ Long - Cát Bà </h5>
 
 
     </div>
 
-    <div class="box-1 col-lg-3 mt-3">
+    <div class="box-1 col-lg-3 mt-4">
         <img class="img-box"
              src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_720,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/lssrph1ejekphuwm0gbv/TourC%C3%A2uC%C3%A1V%C3%A0L%E1%BA%B7n%E1%BB%90ngTh%E1%BB%9FT%E1%BA%A1i%C4%90%E1%BA%A3oH%C3%B2nMun,%C4%90%E1%BA%A3oB%E1%BB%93ngNguy%C3%AAnV%C3%A0%C4%90%E1%BA%A3oH%C3%B2nT%E1%BA%B1m.webp"
              alt="">
         <h5 class="text-word">Nha Trang - Khánh Hoà </h5>
     </div>
 
-    <div class="box-1 col-lg-3 mt-3">
+    <div class="box-1 col-lg-3 mt-4">
         <img class="img-box"
              src="http://streaming1.danviet.vn/upload/4-2016/images/2016-12-02/148065497140099-hoa-cai-trang-moc-chau5.jpg"
              alt="">
@@ -303,7 +213,9 @@
 
 <div class="row col-lg-12 " style="  margin-left: 4px ;
     ;margin-top: 7%;background-color: white">
-    <div class="col-lg-12" style="border-bottom: 1px solid orange;text-align: center"><h3 class="title-2 mt-4">Tour mới của Pleasant </h3>
+    <div class="col-lg-12" style="border-bottom: 1px solid orange;text-align: center"><h3 class="title-2 mt-4">Tour
+            mới
+            của Pleasant </h3>
     </div>
 
 
@@ -334,7 +246,7 @@
     <div class="col-lg-3 mt-3 tourng" style="text-align: center">
         <img class=" tourng-img"
              src="https://cdn2.ivivu.com/2018/08/02/17/ivivu-cong-vien-disneyland.jpg" alt="">
-        <div class=" tourng-name">HongKong city tour - Công viên Disneyland </div>
+        <div class=" tourng-name">HongKong city tour - Công viên Disneyland</div>
         <div class=" tourng-gia"><strong>14.499.000đ</strong> / 7 ngày</div>
         <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
             Jetstar).
@@ -346,7 +258,7 @@
     <div class="col-lg-3 mt-3 tourng" style="text-align: center">
         <img class=" tourng-img"
              src="https://travel.com.vn/Images/destination/tf_160711_phuket.jpg" alt="">
-        <div class=" tourng-name">Đảo Phuket - Phi Phi (Bay thẳng, tặng vé xem phim simon) </div>
+        <div class=" tourng-name">Đảo Phuket - Phi Phi (Bay thẳng, tặng vé xem phim simon)</div>
         <div class=" tourng-gia"><strong>10.199.000đ</strong> / 5 ngày</div>
         <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
             Jetstar).
@@ -362,7 +274,7 @@
         <div class=" tourng-gia"><strong>9.500.000đ</strong> / 4 ngày</div>
         <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
             Jetstar).
-             -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
+            -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
         </div>
         <button type="button" class="btn btn-deep-orange">Đặt ngay</button>
     </div>
@@ -403,58 +315,8 @@
         <button type="button" class="btn btn-deep-orange">Đặt ngay</button>
     </div>
 
-
-
-
-    <!--<div class="box col-lg-4 mt-3">-->
-    <!--<img class="img-box" src="https://travel.com.vn/Images/destination/tf_160108_Merlion6_resize.jpg" alt="">-->
-    <!--<h5 class="text-word">-->
-    <!--Singapore (Tham quan đầy đủ, khách sạn 4*,Tour Tiêu Chuẩn)</h5>-->
-    <!--<a class="input" href="detail.html">Chi tiết...</a>-->
-    <!--</div>-->
-
-    <!--<div class="box col-lg-4 mt-3">-->
-    <!--<img class="img-box" src="https://travel.com.vn/Images/tour/tfd_161107113515_997050.jpg" alt="">-->
-    <!--<h5 class="text-word">Tokyo - Odaiba - Núi Phú Sĩ - Kyoto - Kobe - Osaka (Thưởng thức trái)</h5>-->
-    <!--<p class="text-word">- </p>-->
-    <!--<a class="input" href="detail.html">Chi tiết...</a>-->
-
-    <!--</div>-->
-
-    <!--<div class="box col-lg-4 mt-3">-->
-    <!--<img class="img-box" src="https://travel.com.vn/Images/destination/tf_160711_phuket.jpg" alt="">-->
-    <!--<h5 class="text-word">Phuket - Đảo Phi Phi (Bay thẳng, Tặng vé xem Simon show)</h5>-->
-    <!--<p class="text-word">- Tự do khám phá Phuket về đêm..</p>-->
-    <!--<a class="input" href="detail.html">Chi tiết...</a>-->
-    <!--</div>-->
-
-    <!--<div class="box col-lg-4 mt-3">-->
-    <!--<img class="img-box" src="https://travel.com.vn/Images/destination/tf_171108114843_152985.jpg" alt="">-->
-    <!--<h5 class="text-word">Bangkok - Pattaya (Khách sạn 3*, Tặng buffet Baiyoke Sky)</h5>-->
-    <!--<p class="text-word">- Riêng tối thứ hai đầu tháng sẽ không trình diễn, chương trình sẽ được...</p>-->
-    <!--<a class="input" href="detail.html">Chi tiết...</a>-->
-    <!--</div>-->
-
-    <!--<div class="box col-lg-4 mt-3">-->
-    <!--<img class="img-box" src="https://travel.com.vn/Images/destination/tf_170301093758_045662.jpg" alt="">-->
-    <!--<h5 class="text-word">Singapore (Một ngày tự do,Tour Tiết Kiệm)</h5>-->
-    <!--<p class="text-word">- Ăn tối tại nhà hàng địa phương, đoàn về nhận phòng và nghỉ ngơi tại khách sạn 3-->
-    <!--sao...</p>-->
-    <!--<a class="input" href="detail.html">Chi tiết...</a>-->
-    <!--</div>-->
-
-    <!--<div class="box col-lg-4 mt-3">-->
-    <!--<img class="img-box" src="https://travel.com.vn/Images/destination/tf_151111_cappadocia1.jpg" alt="">-->
-    <!--<h5 class="text-word">Thổ Nhĩ Kỳ: Nơi Á - Âu hội tụ (Khách sạn 5 sao, Tour Giá Sốc)</h5>-->
-    <!--<p class="text-word">- Một điểm đến đầy đủ những phong cách du lịch, đáp ứng mọi nhu cầu của...</p>-->
-    <!--<a class="input" href="detail.html">Chi tiết...</a>-->
-    <!--</div>-->
-
-    <!--<button type="submit" class="btn btn-danger" style="margin-left: 550px;width: 10%; margin-top: 20px">Xem thêm-->
-    <!--</button>-->
-    <!--</div>-->
 </div>
-<div class="row col-lg-12 " style="  margin-left: 4px ;
+<div class="row col-lg-12 none " style="  margin-left: 4px ;
     ;margin-top: 7%;background-color: white">
     <div class="col-lg-12" style="border-bottom: 1px solid orange"><h3 class="title-2 mt-4">Những địa điểm được yêu
             thích nước ngoài </h3>
@@ -501,7 +363,7 @@
     <div class="mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <div class="hovereffect">
             <img class="img-responsive"
-                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzrRsHzJEuP5hb7vsmQcce8ZGqYkPqBTz-CpiQJ0x3SfhgxDDMTQ"
+                 src="https://kenhhomestay.com/wp-content/uploads/2017/12/ho-da-hoa-an-tuyet-tinh-coc-dong-nai-1-min.jpg"
                  alt="">
             <div class="overlay">
                 <a class="info" href="#">Ninh Bình </a>
@@ -513,7 +375,7 @@
     </div>
 </div>
 
-<div class="row col-lg-12 " style=" ;
+<div class="row col-lg-12 none " style=" ;
     margin-left: 4px;background-color: white">
 
     <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12">
@@ -542,14 +404,14 @@
             </div>
         </div>
     </div>
-    <div class="  col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <div class="hovereffect">
             <img class="img-responsive"
-                 src="https://lh5.googleusercontent.com/-4e15eR0Vgqo/Wzols5PhTTI/AAAAAAAAaAE/OWKQcqCcafgcnFrkuB-UYyZoaQTBRTvtwCLIBGAYYCw/w317-h238-k-no/"
+                 src="https://lh3.googleusercontent.com/-FZoJphRpktU/WxEgKSkhEdI/AAAAAAAAAVc/7PXZ6fY6jeYpk9sKVxFI2vJjIEKn2gQLQCLIBGAYYCw/w357-h238-k-no/"
                  alt="">
             <div class="overlay">
-                <a class="info" href="#">Vĩnh Phúc </a>
-                <h2>Tam Đảo</h2>
+                <a class="info" href="#">Quảng Bình </a>
+                <h2>Phong Nha Kẻ Bàng</h2>
 
 
             </div>
@@ -570,214 +432,86 @@
     </div>
 
 
-    <div class="row col-lg-12 " style="  margin-left: 4px ;
-    ;margin-top: 7%;background-color: white">
-        <div class="col-lg-12" style="border-bottom: 1px solid orange"><h3 class="title-2 mt-4">Những địa điểm được yêu
-                thích nước ngoài</h3>
-        </div>
-        <div class=" mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <div class="hovereffect">
-                <img class="img-responsive"
-                     src="https://travel.com.vn/Images/destination/tf_150624_LUX-Maldives-06-0.jpg"
-                     alt="">
-                <div class="overlay">
-                    <a class="info" href="#">Ấn Độ </a>
-                    <h2>Maldives</h2>
-
-
-                </div>
-            </div>
-        </div>
-        <div class="mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <div class="hovereffect">
-                <img class="img-responsive"
-                     src="https://cdn2.ivivu.com/2018/01/26/13/ivivu-nami-hoa-ad.jpg"
-                     alt="">
-                <div class="overlay">
-                    <a class="info" href="#">Nhật Bản </a>
-                    <h2>Ngắm hoa anh đào</h2>
-
-
-                </div>
-            </div>
-        </div>
-        <div class=" mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <div class="hovereffect">
-                <img class="img-responsive"
-                     src="https://cdn2.ivivu.com/2018/09/27/11/ivivu-tour-truong-gia-gioi-6n5d-thanh-co-phuong-hoang-vu-han-bia.jpg"
-                     alt="">
-                <div class="overlay">
-                    <a class="info" href="#">Trung Quốc</a>
-                    <h2>Phượng Hoàng Cổ Trấn - Đồng Nhân</h2>
-
-
-                </div>
-            </div>
-        </div>
-        <div class="mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <div class="hovereffect">
-                <img class="img-responsive"
-                     src="https://cdn2.ivivu.com/2016/08/29/18/ivivu-tour-han-quoc-5n5d-seoul-jeju-nami-everland-nami-1.jpg"
-                     alt="">
-                <div class="overlay">
-                    <a class="info" href="#">Hàn Quốc </a>
-                    <h2>Công viên giải trí Everland </h2>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row col-lg-12 " style=" ;
-    margin-left: 4px;background-color: white">
-
-        <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <div class="hovereffect">
-                <img class="img-responsive"
-                     src="https://cdn2.ivivu.com/2018/12/19/17/ivivu-dao-thuyen-tren-dong-song-chaophraya.jpg"
-                     alt="">
-                <div class="overlay">
-                    <a class="info" href="#">Thái Lan</a>
-                    <h2>Chiang Mai - Chiang Rai </h2>
-
-
-                </div>
-            </div>
-        </div>
-        <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <div class="hovereffect">
-                <img class="img-responsive"
-                     src="https://cdn2.ivivu.com/2018/08/01/11/ivivu-thu-do-amsterdam.jpg"
-                     alt="">
-                <div class="overlay">
-                    <a class="info" href="#">Đức - Bỉ </a>
-                    <h2>Luxembourg</h2>
-
-
-                </div>
-            </div>
-        </div>
-        <div class="  col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <div class="hovereffect">
-                <img class="img-responsive"
-                     src="https://cdn2.ivivu.com/2018/09/26/17/ivivu-tour-lien-tuyen-chau-au-10n10d-phap-thuy-si-vatican-comar.jpg"
-                     alt="">
-                <div class="overlay">
-                    <a class="info" href="#">Pháp </a>
-                    <h2>Làng cổ Colmar</h2>
-
-
-                </div>
-            </div>
-        </div>
-        <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <div class="hovereffect">
-                <img class="img-responsive"
-                     src="https://cdn2.ivivu.com/2018/04/06/16/ivivu-lang-co-thap-phan.jpg"
-                     alt="">
-                <div class="overlay">
-                    <a class="info" href="#">Đài Loan </a>
-                    <h2>Đài Bắc - Tháp Tapei</h2>
-
-
-                </div>
-            </div>
-        </div>
-
-    <div class="col-lg-12 mb-3 mt-5" style="border-bottom: 1px solid orange;text-align: center"><h3 class="title-2 mt-4">Vì sao chọn chúng tôi</h3>
-    </div>
-    <div class="gt">
-        <div class="row pad" style="margin: 0">
-            <div class="col-lg-3">
-                <div class="row des2">
-
-                    <div class="col-lg-10"><h4>MẠNG BÁN TOUR</h4>
-                        <p>An toàn và linh hoạt
-                            Liên kết với các tổ chức tài chính
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-
-                <div class="row des2">
-                    <div class="col-lg-10"><h4>THANH TOÁN</h4>
-                        <p>Số 1 tại Việt Nam
-                            Ứng dụng công nghệ mới nhất
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-
-                <div class="row des2">
-                    <div class="col-lg-10"><h4>GIÁ CẢ</h4>
-                        <p>Luôn có mức giá tốt nhất
-                            Bảo đảm giá tốt
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-
-                <div class="row des2">
-                    <div class="col-lg-10"><h4>SẢN PHẨM</h4>
-                        <p>Đa dạng, chất lượng
-                            Đạt chất lượng tốt nhất
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-
-                <div class="row des2">
-                    <div class="col-lg-10"><h4>ĐẶT TOUR
-                        </h4>
-                        <p>Dễ dàng và nhanh chóng
-                            Đặt tour chỉ với 3 bước
-
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-
-                <div class="row des2">
-                    <div class="col-lg-10"><h4>HỖ TRỢ
-                        </h4>
-                        <p>24/7
-                            Hotline và hỗ trợ trực tuyến
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
 </div>
+<div class="gt" style="text-align: center">
+    <div class="row pad" style="margin: 0">
 
-<footer style="background-color: #004165;font-weight: 500;padding-top: 10px;margin-top: 10px;margin-left: 20px;width: 97%">
-    <div class="container" style="background-color: #004165">
+        <div class="col-lg-12 " style="text-align: center"><h3 class="title-2">Vì sao chọn chúng tôi</h3></div>
+
+
+        <div class="col-lg-3">
+            <div class="row">
+                <img class="col-lg-11" style="margin-bottom: 15px" height="70px" width="70px"
+                     src="https://image.flaticon.com/icons/svg/201/201623.svg" alt="">
+            </div>
+            <div class="row des2">
+
+                <div class="col-lg-11"><h4>MẠNG BÁN TOUR</h4>
+                    <p>An toàn và linh hoạt
+                        Liên kết với các tổ chức tài chính
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="row">
+                <img class="col-lg-11" style="margin-bottom: 15px" height="70px" width="70px"
+                     src="https://image.flaticon.com/icons/svg/204/204276.svg" alt="">
+            </div>
+            <div class="row des2">
+                <div class="col-lg-11"><h4>THANH TOÁN</h4>
+                    <p>Số 1 tại Việt Nam
+                        Ứng dụng công nghệ mới nhất
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="row">
+                <img class="col-lg-11" style="margin-bottom: 15px" height="70px" width="70px"
+                     src="https://image.flaticon.com/icons/svg/1169/1169918.svg" alt="">
+            </div>
+            <div class="row des2">
+                <div class="col-lg-11"><h4>GIÁ CẢ</h4>
+                    <p>Luôn có mức giá tốt nhất
+                        Bảo đảm giá tốt
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="row">
+                <img class="col-lg-11" style="margin-bottom: 15px" height="70px" width="70px"
+                     src="https://image.flaticon.com/icons/svg/1257/1257375.svg" alt="">
+            </div>
+            <div class="row des2">
+                <div class="col-lg-11"><h4>SẢN PHẨM</h4>
+                    <p>Đa dạng, chất lượng
+                        Đạt chất lượng tốt nhất
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<footer style="background-color: #2c2e3f;font-weight: 500;padding-top: 10px;width: 100%; ">
+    <div class="container" style="background-color: #2c2e3f">
         <div class="row mt-5 mb-5">
-
-            <div class="row col-lg-3 ml-5">
+            <div class="row col-lg-3 ml-5 lienhe">
                 <h5 class="connect">Kết nối với chúng tôi </h5>
-                <p class="footer-img col-lg-12" style="color: white"><a
-                            href="https://www.facebook.com/Pleasant-1186652804820351/?modal=admin_todo_tour">
-                        <img src="https://travel.com.vn/Content/themeSummer/img/fb.png" alt="">
-                    </a>Facebook</p>
+                <p class="footer-img col-lg-12" style="color: white">
+                    <img src="https://travel.com.vn/Content/themeSummer/img/fb.png" alt="">
+                    <a style="color: white" target="_blank" href="https://www.facebook.com/saker.kr"> Facebook </a></p>
 
                 <p class="footer-img col-lg-12" style="color: white">
-                    <a href="">
-                        <img src="https://travel.com.vn/Content/themeSummer/img/gp.png" alt="">
-                    </a>Google+</p>
+
+                    <img src="https://travel.com.vn/Content/themeSummer/img/gp.png" alt="">
+                    <a target="_blank" style="color: white"
+                       href="https://plus.google.com/u/0/101031412553146893296?tab=wX"> Google+ </a></p>
 
                 <p class="footer-img col-lg-12" style="color: white">
                     <a href="">
@@ -788,11 +522,16 @@
                     <a href="">
                         <img src="https://travel.com.vn/Content/themeSummer/img/yt.png" alt="">
                     </a>Youtube</p>
+                <p class="footer-img col-lg-12" style="color: white">
+                    <a href="">
+                        <img width="30px" height="30px" src="https://image.flaticon.com/icons/svg/1034/1034233.svg"
+                             alt="">
+                    </a> 0348431677</p>
 
             </div>
 
 
-            <div class="row col-lg-4">
+            <div class="row col-lg-4 thanhtoan">
                 <h5 class="col-lg-12 connect">Chấp nhận thanh toán </h5>
                 <div class="row">
                     <div class="img-footer col-3">
@@ -830,9 +569,10 @@
                         <img src="https://travel.com.vn/Content/themeSummer/img/other3.png" alt="">
                     </div>
                 </div>
-                <h5 style="margin-top: 10px" class="  col-lg-12 connect">Ứng dụng di động</h5>
-                <div class="row" style="margin-top: 10px">
-                    <div class="col-6">
+
+                <div class="row ungdungdt" style="margin-top: 10px">
+                    <h5 style="margin-top: 10px;" class="  col-lg-12 connect">Ứng dụng di động</h5>
+                    <div class="col-3">
 
                         <a href="">
                             <img src="https://travel.com.vn/Content/themeSummer/img/a.png" alt="">
@@ -840,7 +580,7 @@
                         <p class="ungdung">Android</p>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-3">
                         <a href="">
                             <img src="https://travel.com.vn/Content/themeSummer/img/i.png" alt="">
                         </a>
@@ -851,29 +591,60 @@
 
 
             </div>
-            <div class="col-lg-4">
-                <div class="col-xs-4 " style="width:100%;"><h5 class="col-lg-12 connect">ĐỊA CHỈ CÔNG TY</h5>
-                    <iframe width="98%" height="240px"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.096707985379!2d105.77964481486173!3d21.028816135998333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abbfa96f309f%3A0x7917af0f83effe1b!2sFPT+University+Hanoi!5e0!3m2!1sen!2s!4v1546974348745"
-                            class=" map" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="col-lg-2 dat-tour" style="color: white" >
+                <h5 class="  col-lg-12 connect">Đặt tour</h5>
+                <!--<div class="col-xs-4 " style="width:100%; padding: 2px"><h5 class="col-lg-12 connect">ĐỊA CHỈ CÔNG TY</h5>-->
+                <!--<iframe width="100%" height="240px"-->
+                <!--src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.096707985379!2d105.77964481486173!3d21.028816135998333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abbfa96f309f%3A0x7917af0f83effe1b!2sFPT+University+Hanoi!5e0!3m2!1sen!2s!4v1546974348745"-->
+                <!--class=" map" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+                <!--</div>-->
+                <div class="col-lg-12">
+                    <a href=""> Tour nước ngoài</a>
+                </div>
+                <div class="col-lg-12">
+                    <a href="">  Tour trong nước</a>
+                </div>
+                <div class="col-lg-12">
+                    <a href=""> Dịch vụ</a>
+                </div>
+                <div class="col-lg-12">
+
+                </div>
+                <div class="col-lg-12">
+                    <a href=""> Liên hệ</a>
                 </div>
             </div>
-
+            <div class="col-lg-2 dong-tour" style="color: white">
+                <h5 class="  col-lg-12 connect">Dòng tour</h5>
+                <!--<div class="col-xs-4 " style="width:100%; padding: 2px"><h5 class="col-lg-12 connect">ĐỊA CHỈ CÔNG TY</h5>-->
+                <!--<iframe width="100%" height="240px"-->
+                <!--src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.096707985379!2d105.77964481486173!3d21.028816135998333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abbfa96f309f%3A0x7917af0f83effe1b!2sFPT+University+Hanoi!5e0!3m2!1sen!2s!4v1546974348745"-->
+                <!--class=" map" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+                <!--</div>-->
+                <div class="col-lg-12">
+                    <a href="">Tour cao cấp</a>
+                </div>
+                <div class="col-lg-12">
+                    <a href=""> Tour tiếu chuẩn</a>
+                </div>
+                <div class="col-lg-12">
+                    <a href=""> Tour tiết kiệm</a>
+                </div>
+            </div>
         </div>
 
-        <div class="col-xs-12 text-center">
-            <p>Bản quyền của Pleasant ® 2016. Bảo lưu mọi quyền. Ghi rõ nguồn "www.pleasant.com.vn" ® khi sử
-                dụng lại
-                thông tin từ website này</p>
-            <p>Số GPKD: 0300465937 do Sở Kế Hoạch và Đầu Tư Thành Phố Hồ Chí Minh cấp ngày 27/09/2010</p>
-            <p>Giấy phép số: 239/GP-TTĐT do Cục Quản Lý Phát Thanh, Truyền Hình và Thông Tin Điện Tử cấp ngày
-                31/12/2008</p>
-            <script language="JavaScript" src="https://DunsRegistered.dnb.com" type="text/javascript"></script>
-            <iframe id="Iframe1" src="https://dunsregistered.dnb.com/SealAuthentication.aspx?Cid=1"
-                    width="114px"
-                    height="97px" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-        </div>
 
+    </div>
+
+    <div class="col-xs-12 text-center">
+        <p>Bản quyền của Pleasant ® 2016. Bảo lưu mọi quyền. Ghi rõ nguồn "www.pleasant.com.vn" ® khi sử
+            dụng lại
+            thông tin từ website này</p>
+        <p>Số GPKD: 0300465937 do Sở Kế Hoạch và Đầu Tư Thành Phố Hồ Chí Minh cấp ngày 27/09/2010</p>
+        <p>Giấy phép số: 239/GP-TTĐT do Cục Quản Lý Phát Thanh, Truyền Hình và Thông Tin Điện Tử cấp ngày
+            31/12/2008</p>
+
+    </div>
     </div>
 </footer>
 

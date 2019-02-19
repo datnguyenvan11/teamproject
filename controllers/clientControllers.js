@@ -9,13 +9,16 @@ exports.generateLogin = function (req, res) {
 exports.processLogin = function (req, res) {
     //xử lý đăng nhập// check email, password
 };
-
+exports.lienhe = function (req, res) {
+    res.render("client/contentLienhe.ejs")};
 // Register user
 exports.generateRegister = function (req, res) {
     res.render("client/contentRegister.ejs")
 };
 
-
+exports.dichvu = function (req, res) {
+    res.render("client/contentDIchvu.ejs")
+};
 
 exports.processRegister = function (req, res) {
     var user = new userModel({

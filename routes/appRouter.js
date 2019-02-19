@@ -9,7 +9,8 @@ exports.routing = function (app) {
     //Đăng ký người dùng
     app.get("/register", clientController.generateRegister);
     app.post("/register", clientController.processRegister);
-
+    app.get("/dichvu", clientController.dichvu);
+    app.get("/lienhe", clientController.lienhe);
 //Trang admin
     //List Tour
     app.get("/admin/tour/list", adminController.listTour);
