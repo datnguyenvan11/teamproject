@@ -44,7 +44,18 @@ exports.listAdmin = function (req, res) {
 exports.listOrder = function (req, res) {
     res.render("admin/contentListOrder.ejs");
 };
-
+exports.dashboard = function (req, res) {
+    res.render("admin/dashboard.ejs");
+};
+exports.notifications = function (req, res) {
+    res.render("admin/notifications.ejs");
+};
+exports.tables = function (req, res) {
+    res.render("admin/tables.ejs");
+};
+exports.user = function (req, res) {
+    res.render("admin/user.ejs");
+};
 //List User
 exports.listUser = function (req, res) {
     registerModel.find({}, function (err, user) {

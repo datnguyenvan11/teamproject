@@ -30,6 +30,12 @@ exports.routing = function (app) {
     app.get("/admin/list-orders", adminController.listOrder);
     //List User
     app.get("/admin/list-users", adminController.listUser);
+    app.get("/admin/dashboard", adminController.dashboard);
+
+    app.get("/admin/notifications", adminController.notifications);
+    app.get("/admin/tables", adminController.tables);
+    app.get("/admin/user", adminController.user);
+
 };
 
 
