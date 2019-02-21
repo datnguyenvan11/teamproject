@@ -11,6 +11,8 @@ exports.routing = function (app) {
     app.post("/register", clientController.processRegister);
     app.get("/dichvu", clientController.dichvu);
     app.get("/lienhe", clientController.lienhe);
+    app.get("/danhgia", clientController.danhgia);
+
 //Trang admin
     //List Tour
     app.get("/admin/tour/list", adminController.listTour);
