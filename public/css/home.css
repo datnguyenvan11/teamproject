@@ -415,6 +415,16 @@ strong {
     .ftco-animate{
         margin-left: 20px;
     }
+    .swiper-slide{
+        width: 200%;
+    }
+    .formlh input,textarea{
+        border: 1px solid black;
+    }
+    .boxlh{
+        padding-left:27px ;
+    }
+
 }
 
 footer {
@@ -423,4 +433,7 @@ footer {
 
 a {
     color: white;
+}
+.gt{
+    background: #f8faff;
 }

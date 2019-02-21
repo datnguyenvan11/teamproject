@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Travel Tour</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/hh.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    -->
+    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/aos.css">
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/icomoon.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home2.css">
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+
+    <style>
+        .team .col-lg-2{
+            border: 1px solid #bfbfbf;
+            margin-left: 35px;
+        }
+
+        .container1 {
+            position: relative;
+            width: 100%;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        .container1:hover .overlay {
+            height: 30%;
+        }
+
+        .text {
+            color: #ff5f5f;
+            font-size: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin-top: 140px;
+        }
+
+        .swiper-slide {
+            width: 100%;
+            height: 420px;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            list-style: none;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide-con {
+            height: 350px;
+            width: 90%;
+            border: 1px solid #afafaf;
+
+        }
+
+        .swiper-slide-con .avatar {
+            margin-top: -30px;
+            width: 120px;
+            height: 120px;
+            border-radius: 120px;
+
+        }
+
+        .swiper-slide-text {
+            text-align: center;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Montserrat&subset=vietnamese');
+        * {
+            font-family: sans-serif;
+        }
+
+        #ftco-nav ul li a {
+            color: white;
+        }
+
+        .nav1 {
+            border-bottom: 2px solid #69abdc;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"
+           style=" color: #e36921;font-size: 25px;font-family:-apple-system"> <img width="70px" height="70px"
+                                                                                   src="https://logopond.com/logos/eef0d9fa9f3d70035ef32fcd5fcc5b6e.png"
+                                                                                   alt=""> Pleasant Tour
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active  "><a href="/" class="nav-link" style="color: white">Trang chủ </a>
+                </li>
+                <li class="nav-item"><a href="" class="nav-link">Tours</a></li>
+                <li class="nav-item"><a href="/dichvu" class="nav-link">Dịch vụ</a></li>
+                <li class="nav-item nav1"><a href="/danhgia" class="nav-link">Đánh giá</a></li>
+                <li class="nav-item"><a href="/lienhe" class="nav-link">Liên hệ </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="home-slider owl-carousel">
+    <div  class="slider-item"
+          style="background-image: url(https://imgtravel.com.au/content/uploads/image-home-packages-2-@2x.jpg); background-size: cover;height: 400px">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text align-items-center">
+                <div class="col-md-7 col-sm-12 ftco-animate">
+                    <h5 style="color: white"><a style="font-weight: bold; color: white;margin-right: 7px" href="/">TRANG CHỦ </a>  ĐÁNH GIÁ  </h5>
+                    <h1 class="mb-3">Đánh giá </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<div class="row " style="padding: 0;margin: 0">
+    <div class="col-lg-6" style="padding: 0;margin: 0">
+        <img class=" img-play" id="img-play" width="80px" height="80px  "
+             src="https://image.flaticon.com/icons/svg/122/122626.svg" alt="">
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <iframe class="modal-content" id="img01" width="560" height="405"
+                    src="https://www.youtube.com/embed/I0gLzfc5Xew" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        <img width="100%" src="https://edulinks.vn/wp-content/uploads/2018/06/viagem-internacional-1.jpg" alt="">
+    </div>
+    <div class="col-lg-6" style="padding: 70px;">
+
+
+        Pleasant l&agrave; c&ocirc;ng ty lữ h&agrave;nh số 1 Việt Nam, chuy&ecirc;n tổ chức c&aacute;c
+        tour du lịch nước ngo&agrave;i, với gần 1.000 tuyến khắp 5 ch&acirc;u. Bạn sẽ c&oacute; dịp kh&aacute;m
+        ph&aacute; những miền đất mới tại c&aacute;c nước Đ&ocirc;ng Nam &Aacute;, Ch&acirc;u &Aacute;, ch&acirc;u
+        &Acirc;u, &Uacute;c, Mỹ, hay kh&aacute;m ph&aacute; những v&ugrave;ng đất Ch&acirc;u Phi xa x&ocirc;i...
+        Với lịch tr&igrave;nh d&agrave;y, khởi h&agrave;nh đ&uacute;ng thời gian cam kết, Vietravel l&agrave;
+        c&ocirc;ng
+        ty lữ h&agrave;nh uy t&iacute;n nhất hiện nay tại Việt Nam, lu&ocirc;n sẵn s&agrave;ng phục vụ du kh&aacute;ch
+        mọi l&uacute;c, mọi nơi, đảm bảo t&iacute;nh chuy&ecirc;n nghiệp v&agrave; chất lượng dịch vụ tốt
+        nhất
+        thị trường
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="swiper-container" style="margin-bottom: 100px">
+    <div style="margin-bottom: 20px;text-align: center"><h1> Đánh giá của khách hàng </h1></div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" >
+            <div class="swiper-slide-con">
+                <img class="avatar"
+                     src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-9/50981246_2297009053897887_4042971020598968320_n.jpg?_nc_cat=102&_nc_oc=AQlLCuPrfRY-Cnow78HJ5J71FUJ9bm81bBjU086hIK7f0kaaqHOGlFllzF_HPH6PT2c&_nc_ht=scontent.fhan9-1.fna&oh=b4c12340f028154848b92de6abab8276&oe=5D1FB398"
+                     alt="">
+<div><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""></div>
+                <div class="swiper-slide-text mt-3">
+                   Web hoạt động ổn định văn minh, dịch vụ tốt, hỗ trợ nhiệt tình, luôn ủng hộ web
+
+                </div>
+                <div style="margin-top: 50px">
+                    <div class="swiper-slide-name" style="color: #ff5f5f">
+                       Nguyễn Văn Đạt
+                    </div>
+                    <div class="swiper-slide-from" style="">
+     Viêt Nam
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-slide ">
+            <div class="swiper-slide-con">
+                <img class="avatar"
+                     src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-9/45088669_579135682544245_7623162751027773440_n.jpg?_nc_cat=100&_nc_oc=AQmwPTjz1mjA1q31wZhHV9YcdibTlWl2UFvoR_iIxQVxArfpZm2bTj499d4DBv-czE8&_nc_ht=scontent.fhan9-1.fna&oh=fc3960b73d8813dd01af3d5117c32eed&oe=5D205A92"
+                     alt="">
+                <div><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""></div>
+
+                <div class="swiper-slide-text mt-3">
+                    Want to get our hottest travel deals top tips and advice? Subscribe us now!
+
+                </div>
+                <div style="margin-top: 50px ">
+                    <div class="swiper-slide-name" style="color: #ff5f5f">
+                     John Nguyễn
+                    </div>
+                    <div class="swiper-slide-from" style="">
+                      Hoa Kì
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-slide ">
+            <div class="swiper-slide-con">
+                <img class="avatar"
+                     src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-9/51430466_520919988431009_3028402825051766784_n.jpg?_nc_cat=101&_nc_oc=AQk1PURCmsIsodeH5_7-gY3ZpQSWUiDrEX4FAw7iqRAeC9wFsImijkuCPntzgPHt8XA&_nc_ht=scontent.fhan9-1.fna&oh=87d7c9931eb71ea74752adba93a2e1b7&oe=5CE53173"
+                     alt="">
+                <div><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""></div>
+
+                <div class="swiper-slide-text mt-3">
+                    Web hoạt động ổn định văn minh, dịch vụ tốt, hỗ trợ nhiệt tình, luôn ủng hộ web
+
+                </div>
+                <div style="margin-top: 50px">
+                    <div class="swiper-slide-name" style="color: #ff5f5f">
+                    Hoàng Xuân
+                    </div>
+                    <div class="swiper-slide-from" style="">
+                        Việt Nam
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide-con">
+                    <img class="avatar"
+                         src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-9/51218136_362263624326108_1695596794324451328_n.jpg?_nc_cat=103&_nc_oc=AQl3YvSh-EZoAy_3q1eoHy657KjuvNmu6ksH76wkVXN15QGTBYoh1ZdRP3Q6cxgAdbE&_nc_ht=scontent.fhan9-1.fna&oh=719acf19c9d0e2c48b87850e10c73be2&oe=5CEB68DD"
+                         alt="">
+                    <div><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""></div>
+
+                    <div class="swiper-slide-text mt-3">
+                        Web hoạt động ổn định văn minh, dịch vụ tốt, hỗ trợ nhiệt tình, luôn ủng hộ web
+
+                    </div>
+                    <div style="margin-top: 50px">
+                        <div class="swiper-slide-name" style="color: #ff5f5f">
+                           Trần Thị Ngọc
+                        </div>
+                        <div class="swiper-slide-from" style="">
+                            Việt Nam
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-slide">
+                <div class="swiper-slide-con">
+                    <img class="avatar"
+                         src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-9/51582850_636907910087137_5465043501282492416_o.jpg?_nc_cat=106&_nc_oc=AQmmx69hhRHknmO5rK6_LDDGCzMyaTI3xsskC3unjsTF78LkEwJmKxjDMuLiuqGr-L0&_nc_ht=scontent.fhan9-1.fna&oh=044909afe8122ef9b28e8b11c2aa6533&oe=5D24DE8F"
+                         alt="">
+                    <div><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""></div>
+
+                    <div class="swiper-slide-text mt-3">
+                        Web hoạt động ổn định văn minh, dịch vụ tốt, hỗ trợ nhiệt tình, luôn ủng hộ web
+
+                    </div>
+                    <div style="margin-top: 50px">
+                        <div class="swiper-slide-name" style="color: #ff5f5f">
+                            Nguyễn Thị Hoa
+                        </div>
+                        <div class="swiper-slide-from" style="">
+                            Việt Nam
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide-con">
+                    <img class="avatar"
+                         src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-9/52047624_492139384650117_8820333942180675584_n.jpg?_nc_cat=110&_nc_oc=AQlFdcdss1tW-HQ-Vdao-mZ8Bc-CwH9ApufqQwFQBt9EnFXHxccDzrveiTSb1K3n-Qs&_nc_ht=scontent.fhan9-1.fna&oh=58908a4c6825ebeab965d52b5bf3048c&oe=5CE7DA21"
+                         alt="">
+                    <div><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""></div>
+
+                    <div class="swiper-slide-text mt-3">
+                        Web hoạt động ổn định văn minh, dịch vụ tốt, hỗ trợ nhiệt tình, luôn ủng hộ web
+
+                    </div>
+                    <div style="margin-top: 50px">
+                        <div class="swiper-slide-name" style="color: #ff5f5f">
+                           Nguyễn Quang Thành
+                        </div>
+                        <div class="swiper-slide-from" style="">
+                            Việt Nam
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div >
+
+<div class="row team" style="margin-bottom: 150px">
+    <div class="col-lg-12" style="margin-bottom: 20px;text-align: center"><h1> Team thiết kế </h1></div>
+
+    <div class="col-lg-2">
+        <div class="container1">
+            <img width="100%" src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-9/49608162_2347562718806367_6402918042078019584_n.jpg?_nc_cat=102&_nc_oc=AQkzbwgHsuFN-Nr1Z6qSg9NcqZe9mxzqRUWnNIVJ3YnPAJpC3ppVz9cHVhaKBQGPr2I&_nc_ht=scontent.fhan9-1.fna&oh=43116e630901af09cc9ad99c6e9d9ad1&oe=5CEBCAF6" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Vũ Thị Hoài Anh </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2">
+        <div class="container1">
+            <img src="https://scontent.fhan9-1.fna.fbcdn.net/v/t31.0-8/15235381_1804547296432748_5538068427660305649_o.jpg?_nc_cat=100&_nc_oc=AQlfkn2WN0E1uSHkeNBqGXmhw4k7gMNehZW-sOJNPv3nyNeFwNF3g8eE5m13BoWDcvo&_nc_ht=scontent.fhan9-1.fna&oh=3eee0719621b3bfc5a4df7a966c68825&oe=5CDF188A" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Nguyễn Văn Đạt</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2">
+        <div class="container1">
+            <img src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-0/p206x206/43680942_1037602883089788_2734922929417486336_n.jpg?_nc_cat=104&_nc_oc=AQl14TP523-sG74zTEPDJ5yt-fkoRIiF0T0kIyrbEheM5c8K78meM79Z9UPofKLGCUs&_nc_ht=scontent.fhan9-1.fna&oh=695e388670721d6befb495ab5115b5e7&oe=5CE0121B" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Đặng Tiểu Bình </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2">
+        <div class="container1">
+            <img src="https://scontent.fhan9-1.fna.fbcdn.net/v/t31.0-8/15235381_1804547296432748_5538068427660305649_o.jpg?_nc_cat=100&_nc_oc=AQlfkn2WN0E1uSHkeNBqGXmhw4k7gMNehZW-sOJNPv3nyNeFwNF3g8eE5m13BoWDcvo&_nc_ht=scontent.fhan9-1.fna&oh=3eee0719621b3bfc5a4df7a966c68825&oe=5CDF188A" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Nguyễn Tuấn Anh </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2">
+        <div class="container1">
+            <img src="https://scontent.fhan9-1.fna.fbcdn.net/v/t31.0-8/15235381_1804547296432748_5538068427660305649_o.jpg?_nc_cat=100&_nc_oc=AQlfkn2WN0E1uSHkeNBqGXmhw4k7gMNehZW-sOJNPv3nyNeFwNF3g8eE5m13BoWDcvo&_nc_ht=scontent.fhan9-1.fna&oh=3eee0719621b3bfc5a4df7a966c68825&oe=5CDF188A" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<footer style="background-color: #2c2e3f;font-weight: 500;padding-top: 10px;width: 100%; ">
+    <div class="container" style="background-color: #2c2e3f">
+        <div class="row mt-5 mb-5">
+            <div class="row col-lg-3 ml-5 lienhe">
+                <h5 class="connect">Kết nối với chúng tôi </h5>
+                <p class="footer-img col-lg-12" style="color: white">
+                    <img src="https://travel.com.vn/Content/themeSummer/img/fb.png" alt="">
+                    <a style="color: white" target="_blank" href="https://www.facebook.com/saker.kr"> Facebook </a></p>
+
+                <p class="footer-img col-lg-12" style="color: white">
+
+                    <img src="https://travel.com.vn/Content/themeSummer/img/gp.png" alt="">
+                    <a target="_blank" style="color: white"
+                       href="https://plus.google.com/u/0/101031412553146893296?tab=wX"> Google+ </a></p>
+
+                <p class="footer-img col-lg-12" style="color: white">
+                    <a href="">
+                        <img src="https://travel.com.vn/Content/themeSummer/img/tw.png" alt="">
+                    </a>Twitter</p>
+
+                <p class="footer-img col-lg-12" style="color: white">
+                    <a href="">
+                        <img src="https://travel.com.vn/Content/themeSummer/img/yt.png" alt="">
+                    </a>Youtube</p>
+                <p class="footer-img col-lg-12" style="color: white">
+                    <a href="">
+                        <img width="30px" height="30px" src="https://image.flaticon.com/icons/svg/1034/1034233.svg"
+                             alt="">
+                    </a> 0348431677</p>
+
+            </div>
+
+
+            <div class="row col-lg-4 thanhtoan">
+                <h5 class="col-lg-12 connect">Chấp nhận thanh toán </h5>
+                <div class="row">
+                    <div class="img-footer col-3">
+                        <img src="https://travel.com.vn/Content/themeSummer/img/123pay.png"
+                             alt="">
+                    </div>
+
+                    <div class="img-footer col-3">
+                        <img src="https://travel.com.vn/Content/themeSummer/img/visa.png" alt="">
+                    </div>
+
+                    <div class="img-footer col-3">
+                        <img src="https://travel.com.vn/Content/themeSummer/img/master.png" alt="">
+                    </div>
+
+
+                    <div class="img-footer col-3">
+                        <img src="https://travel.com.vn/Content/themeSummer/img/vnpay.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="img-footer col-3">
+                        <img src="https://travel.com.vn/Content/themeSummer/img/vnpay.jpg" alt="">
+                    </div>
+
+                    <div class="img-footer col-3">
+                        <img src="https://travel.com.vn/Content/themeSummer/img/other1.png" alt="">
+                    </div>
+
+                    <div class="img-footer col-3">
+                        <img src="https://travel.com.vn/Content/themeSummer/img/other2.png" alt="">
+                    </div>
+
+                    <div class="img-footer col-3">
+                        <img src="https://travel.com.vn/Content/themeSummer/img/other3.png" alt="">
+                    </div>
+                </div>
+
+                <div class="row ungdungdt" style="margin-top: 10px">
+                    <h5 style="margin-top: 10px;" class="  col-lg-12 connect">Ứng dụng di động</h5>
+                    <div class="col-3">
+
+                        <a href="">
+                            <img src="https://travel.com.vn/Content/themeSummer/img/a.png" alt="">
+                        </a>
+                        <p class="ungdung">Android</p>
+                    </div>
+
+                    <div class="col-3">
+                        <a href="">
+                            <img src="https://travel.com.vn/Content/themeSummer/img/i.png" alt="">
+                        </a>
+                        <p class="ungdung1">iOS</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-lg-2 dat-tour" style="color: white">
+                <h5 class="  col-lg-12 connect">Đặt tour</h5>
+                <!--<div class="col-xs-4 " style="width:100%; padding: 2px"><h5 class="col-lg-12 connect">ĐỊA CHỈ CÔNG TY</h5>-->
+                <!--<iframe width="100%" height="240px"-->
+                <!--src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.096707985379!2d105.77964481486173!3d21.028816135998333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abbfa96f309f%3A0x7917af0f83effe1b!2sFPT+University+Hanoi!5e0!3m2!1sen!2s!4v1546974348745"-->
+                <!--class=" map" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+                <!--</div>-->
+                <div class="col-lg-12">
+                    <a href=""> Tour nước ngoài</a>
+                </div>
+                <div class="col-lg-12">
+                    <a href=""> Tour trong nước</a>
+                </div>
+                <div class="col-lg-12">
+                    <a href=""> Dịch vụ</a>
+                </div>
+                <div class="col-lg-12">
+
+                </div>
+                <div class="col-lg-12">
+                    <a href=""> Liên hệ</a>
+                </div>
+            </div>
+            <div class="col-lg-2 dong-tour" style="color: white">
+                <h5 class="  col-lg-12 connect">Dòng tour</h5>
+                <!--<div class="col-xs-4 " style="width:100%; padding: 2px"><h5 class="col-lg-12 connect">ĐỊA CHỈ CÔNG TY</h5>-->
+                <!--<iframe width="100%" height="240px"-->
+                <!--src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.096707985379!2d105.77964481486173!3d21.028816135998333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abbfa96f309f%3A0x7917af0f83effe1b!2sFPT+University+Hanoi!5e0!3m2!1sen!2s!4v1546974348745"-->
+                <!--class=" map" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+                <!--</div>-->
+                <div class="col-lg-12">
+                    <a href="">Tour cao cấp</a>
+                </div>
+                <div class="col-lg-12">
+                    <a href=""> Tour tiếu chuẩn</a>
+                </div>
+                <div class="col-lg-12">
+                    <a href=""> Tour tiết kiệm</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="col-xs-12 text-center">
+        <p>Bản quyền của Pleasant ® 2016. Bảo lưu mọi quyền. Ghi rõ nguồn "www.pleasant.com.vn" ® khi sử
+            dụng lại
+            thông tin từ website này</p>
+        <p>Số GPKD: 0300465937 do Sở Kế Hoạch và Đầu Tư Thành Phố Hồ Chí Minh cấp ngày 27/09/2010</p>
+        <p>Giấy phép số: 239/GP-TTĐT do Cục Quản Lý Phát Thanh, Truyền Hình và Thông Tin Điện Tử cấp ngày
+            31/12/2008</p>
+
+    </div>
+    </div>
+
+
+    <!--<div class="stars">-->
+    <!--<form action="">-->
+    <!--<input class="star star-5" id="star-5" type="radio" name="star"/>-->
+    <!--<label class="star star-5" for="star-5"></label>-->
+    <!--<input class="star star-4" id="star-4" type="radio" name="star"/>-->
+    <!--<label class="star star-4" for="star-4"></label>-->
+    <!--<input class="star star-3" id="star-3" type="radio" name="star"/>-->
+    <!--<label class="star star-3" for="star-3"></label>-->
+    <!--<input class="star star-2" id="star-2" type="radio" name="star"/>-->
+    <!--<label class="star star-2" for="star-2"></label>-->
+    <!--<input class="star star-1" id="star-1" type="radio" name="star"/>-->
+    <!--<label class="star star-1" for="star-1"></label>-->
+    <!--</form>-->
+    <!--</div>-->
+</footer>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="/js/jquery.easing.1.3.js"></script>
+<script src="/js/jquery.waypoints.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+
+<script src="/js/jquery.animateNumber.min.js"></script>
+<script src="/js/ss.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/jquery.stellar.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<script src="/js/aos.js"></script>
+<script src="/js/bootstrap-datepicker.js"></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>-->
+<!--<script src="js/google-map.js"></script>-->
+<script src="/js/main.js"></script>
+<script>
+
+</script>
+
+</body>
+</html>
+
+

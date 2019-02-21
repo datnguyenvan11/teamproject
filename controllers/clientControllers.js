@@ -19,6 +19,9 @@ exports.generateRegister = function (req, res) {
 exports.dichvu = function (req, res) {
     res.render("client/contentDIchvu.ejs")
 };
+exports.danhgia = function (req, res) {
+    res.render("client/contentDanhgia.ejs")
+};
 
 exports.processRegister = function (req, res) {
     var user = new userModel({

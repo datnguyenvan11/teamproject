@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="/css/hh.css">
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    -->
     <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="/css/animate.css">
@@ -25,6 +25,51 @@
 
 
     <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin-top: 90px;
+        }
+
+        .swiper-slide {
+            height: 420px;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide-con {
+            height: 350px;
+            width: 90%;
+            border: 1px solid #afafaf;
+
+        }
+
+        .swiper-slide-con .avatar {
+            margin-top: -30px;
+            width: 120px;
+            height: 120px;
+            border-radius: 120px;
+
+        }
+
+        .swiper-slide-text {
+            text-align: center;
+        }
+
         @import url('https://fonts.googleapis.com/css?family=Montserrat&subset=vietnamese');
         * {
             font-family: sans-serif;
@@ -57,7 +102,7 @@
                 <li class="nav-item"><a href="" class="nav-link">Tours</a></li>
                 <li class="nav-item"><a href="/dichvu" class="nav-link">Dịch vụ</a></li>
                 <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/danhgia" class="nav-link">Đánh giá</a></li>
                 <li class="nav-item"><a href="/lienhe" class="nav-link">Liên hệ </a></li>
             </ul>
         </div>
@@ -234,15 +279,16 @@
     </div>
 
     <div class="col-lg-3 mt-3 tourng" style="text-align: center">
-        <img class=" tourng-img"
-             src="https://travel.com.vn/Images/tour/tfd_161107113515_997050.jpg" alt="">
+
         <div class=" tourng-name">Tokyo - Odabai - Núi Phú sĩ (Thưởng thức trà đạo)</div>
         <div class=" tourng-gia"><strong>40.000.000đ</strong> / 14 ngày</div>
         <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
             Jetstar).
             -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
         </div>
-        <button type="button" class="btn btn-deep-orange">Đặt ngay</button>
+        <button type="button" class="btn btn-deep-orange ">Đặt ngay</button>
+        <img class=" tourng-img"
+             src="https://travel.com.vn/Images/tour/tfd_161107113515_997050.jpg" alt="">
     </div>
 
     <div class="col-lg-3 mt-3 tourng" style="text-align: center">
@@ -258,8 +304,7 @@
     </div>
 
     <div class="col-lg-3 mt-3 tourng" style="text-align: center">
-        <img class=" tourng-img"
-             src="https://travel.com.vn/Images/destination/tf_160711_phuket.jpg" alt="">
+
         <div class=" tourng-name">Đảo Phuket - Phi Phi (Bay thẳng, tặng vé xem phim simon)</div>
         <div class=" tourng-gia"><strong>10.199.000đ</strong> / 5 ngày</div>
         <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
@@ -267,61 +312,65 @@
             -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
         </div>
         <button type="button" class="btn btn-deep-orange">Đặt ngay</button>
+        <img class=" tourng-img"
+             src="https://travel.com.vn/Images/destination/tf_160711_phuket.jpg" alt="">
     </div>
 
-    <div class="col-lg-3 tourng" style="text-align: center; margin-top: 30px;margin-bottom: 30px;">
-        <img class=" tourng-img"
-             src="https://travel.com.vn/Images/destination/tf_170301093758_045662.jpg" alt="">
-        <div class=" tourng-name">BangKok - Pattaya (Tặng bufeet Baiyoke Sky)</div>
-        <div class=" tourng-gia"><strong>9.500.000đ</strong> / 4 ngày</div>
-        <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
-            Jetstar).
-            -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
-        </div>
-        <button type="button" class="btn btn-deep-orange">Đặt ngay</button>
-    </div>
+    <!--<div class="col-lg-3 tourng" style="text-align: center; margin-top: 30px;margin-bottom: 30px;">-->
+        <!--<img class=" tourng-img"-->
+             <!--src="https://travel.com.vn/Images/destination/tf_170301093758_045662.jpg" alt="">-->
+        <!--<div class=" tourng-name">BangKok - Pattaya (Tặng bufeet Baiyoke Sky)</div>-->
+        <!--<div class=" tourng-gia"><strong>9.500.000đ</strong> / 4 ngày</div>-->
+        <!--<div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc-->
+            <!--Jetstar).-->
+            <!-- -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.-->
+        <!--</div>-->
+        <!--<button type="button" class="btn btn-deep-orange">Đặt ngay</button>-->
+    <!--</div>-->
 
-    <div class="col-lg-3 tourng" style="text-align: center; margin-top: 30px;margin-bottom: 30px;">
-        <img class=" tourng-img"
-             src="https://travel.com.vn/Images/destination/tf_160906085513_856952.jpg" alt="">
-        <div class=" tourng-name">Dubai - Abu Dhabi ( KS 4*, Thưởng thức cà phê băng)</div>
-        <div class=" tourng-gia"><strong>22.095.000đ</strong> / 6 ngày</div>
-        <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
-            Jetstar).
-            -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
-        </div>
-        <button type="button" class="btn btn-deep-orange">Đặt ngay</button>
-    </div>
+    <!--<div class="col-lg-3 tourng" style="text-align: center; margin-top: 30px;margin-bottom: 30px;">-->
 
-    <div class="col-lg-3 tourng" style="text-align: center; margin-top: 30px;margin-bottom: 30px;">
-        <img class=" tourng-img"
-             src="https://cdn2.ivivu.com/2017/06/16/15/ivivu-christ-church-melaka.jpg" alt="">
-        <div class=" tourng-name">Tour Singapore 6N5D: Singapore - Malaysia</div>
-        <div class=" tourng-gia"><strong>18.350.000đ</strong> / 6 ngày</div>
-        <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
-            Jetstar).
-            -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
-        </div>
-        <button type="button" class="btn btn-deep-orange">Đặt ngay</button>
-    </div>
+        <!--<div class=" tourng-name">Dubai - Abu Dhabi ( KS 4*, Thưởng thức cà phê băng)</div>-->
+        <!--<div class=" tourng-gia"><strong>22.095.000đ</strong> / 6 ngày</div>-->
+        <!--<div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc-->
+            <!--Jetstar).-->
+            <!-- -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.-->
+        <!--</div>-->
+        <!--<button type="button" class="btn btn-deep-orange">Đặt ngay</button>-->
+        <!--<img class=" tourng-img"-->
+             <!--src="https://travel.com.vn/Images/destination/tf_160906085513_856952.jpg" alt="">-->
+    <!--</div>-->
 
-    <div class="col-lg-3 tourng" style="text-align: center; margin-top: 30px;margin-bottom: 30px;">
-        <img class=" tourng-img"
-             src="https://cdn2.ivivu.com/2018/10/26/17/ivivu-osaka-castle-204x153.jpg" alt="">
-        <div class=" tourng-name">Tour Nhật Bản 3N3D: Kansai - Kyoto - Osaka</div>
-        <div class=" tourng-gia"><strong>25.450.000đ</strong> / 4 ngày</div>
-        <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
-            Jetstar).
-            -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
-        </div>
-        <button type="button" class="btn btn-deep-orange">Đặt ngay</button>
-    </div>
+    <!--<div class="col-lg-3 tourng" style="text-align: center; margin-top: 30px;margin-bottom: 30px;">-->
+        <!--<img class=" tourng-img"-->
+             <!--src="https://cdn2.ivivu.com/2017/06/16/15/ivivu-christ-church-melaka.jpg" alt="">-->
+        <!--<div class=" tourng-name">Tour Singapore 6N5D: Singapore - Malaysia</div>-->
+        <!--<div class=" tourng-gia"><strong>18.350.000đ</strong> / 6 ngày</div>-->
+        <!--<div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc-->
+            <!--Jetstar).-->
+            <!-- -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.-->
+        <!--</div>-->
+        <!--<button type="button" class="btn btn-deep-orange">Đặt ngay</button>-->
+    <!--</div>-->
+
+    <!--<div class="col-lg-3 tourng" style="text-align: center; margin-top: 30px;margin-bottom: 30px;">-->
+
+        <!--<div class=" tourng-name">Tour Nhật Bản 3N3D: Kansai - Kyoto - Osaka</div>-->
+        <!--<div class=" tourng-gia"><strong>25.450.000đ</strong> / 4 ngày</div>-->
+        <!--<div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc-->
+            <!--Jetstar).-->
+            <!-- -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.-->
+        <!--</div>-->
+        <!--<button type="button" class="btn btn-deep-orange">Đặt ngay</button>-->
+        <!--<img class=" tourng-img"-->
+             <!--src="https://cdn2.ivivu.com/2018/10/26/17/ivivu-osaka-castle-204x153.jpg" alt="">-->
+    <!--</div>-->
 
 </div>
 <div class="row col-lg-12 none " style="  margin-left: 4px ;
     ;margin-top: 7%;background-color: white">
     <div class="col-lg-12" style="border-bottom: 1px solid orange"><h3 class="title-2 mt-4">Những địa điểm được yêu
-            thích nước ngoài </h3>
+            thích </h3>
     </div>
     <div class=" mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <div class="hovereffect">
@@ -339,11 +388,11 @@
     <div class="mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <div class="hovereffect">
             <img class="img-responsive"
-                 src="https://cdn1.ivivu.com/iVivu/2018/08/31/18/vinpearl-discovery-phu-quoc-5-800x450.jpg"
+                 src="https://www.amec.com.vn/wp-content/uploads/2016/04/93200E91-E06B-497D-803B-F7A0A6E68582.jpg"
                  alt="">
             <div class="overlay">
-                <a class="info" href="#">Kiên Gian </a>
-                <h2>Discovery Phú Quốc</h2>
+                <a class="info" href="#">Hàn Quốc </a>
+                <h2>Seoul</h2>
 
 
             </div>
@@ -352,11 +401,11 @@
     <div class=" mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <div class="hovereffect">
             <img class="img-responsive"
-                 src="https://cdn1.ivivu.com/iVivu/2018/10/26/11/mercure-da-nang-french-village-banahills-1-800x450.jpg"
+                 src="http://media.techz.vn/upload/2013/09/10/image-1378797827-large.jpg"
                  alt="">
             <div class="overlay">
-                <a class="info" href="#">Lào Cai</a>
-                <h2>Sapa - Cát Cát - Hàm Rồng</h2>
+                <a class="info" href="#">Huế</a>
+                <h2>Cung đình huế</h2>
 
 
             </div>
@@ -365,11 +414,11 @@
     <div class="mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <div class="hovereffect">
             <img class="img-responsive"
-                 src="https://kenhhomestay.com/wp-content/uploads/2017/12/ho-da-hoa-an-tuyet-tinh-coc-dong-nai-1-min.jpg"
+                 src="https://tourdulichnhatban.info/view/at_nui-phu-si-o-nhat-ban_9485680fb8c352c136bfbece80b81a3b.jpg"
                  alt="">
             <div class="overlay">
-                <a class="info" href="#">Ninh Bình </a>
-                <h2>Tuyệt tình cốc</h2>
+                <a class="info" href="#">Nhật Bản </a>
+                <h2>Núi Phú Sĩ </h2>
 
 
             </div>
@@ -409,11 +458,11 @@
     <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <div class="hovereffect">
             <img class="img-responsive"
-                 src="https://lh3.googleusercontent.com/-FZoJphRpktU/WxEgKSkhEdI/AAAAAAAAAVc/7PXZ6fY6jeYpk9sKVxFI2vJjIEKn2gQLQCLIBGAYYCw/w357-h238-k-no/"
+                 src="https://media.gody.vn/images/beijing/tu-cam-thanh/12-2016/20161229030830-tu-cam-thanh-gody%20(18).jpg"
                  alt="">
             <div class="overlay">
-                <a class="info" href="#">Quảng Bình </a>
-                <h2>Phong Nha Kẻ Bàng</h2>
+                <a class="info" href="#">Trung Quốc </a>
+                <h2>Tử Cấm Thành </h2>
 
 
             </div>
@@ -426,7 +475,7 @@
                  alt="">
             <div class="overlay">
                 <a class="info" href="#">Quảng Bình </a>
-                <h2>Phong Nha Kẻ Bàng</h2>
+                <h2>Phong Nha - Kẻ Bàng</h2>
 
 
             </div>
@@ -500,6 +549,202 @@
 
     </div>
 </div>
+
+<div class="swiper-container" style="margin-bottom: 100px">
+    <div class="col-lg-12 " style="text-align: center;"><h3 class="title-2">Đánh giá của khách hàng</h3></div>
+
+    <div style="margin-bottom: 20px;text-align: center" class="title-2"><h3></h3></div>
+    <div class="swiper-wrapper ">
+        <div class="swiper-slide">
+            <div class="swiper-slide-con">
+                <img class="avatar"
+                     src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-9/50981246_2297009053897887_4042971020598968320_n.jpg?_nc_cat=102&_nc_oc=AQlLCuPrfRY-Cnow78HJ5J71FUJ9bm81bBjU086hIK7f0kaaqHOGlFllzF_HPH6PT2c&_nc_ht=scontent.fhan9-1.fna&oh=b4c12340f028154848b92de6abab8276&oe=5D1FB398"
+                     alt="">
+                <div><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg"
+                          alt=""><img width="20px" height="20px"
+                                      src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px"
+                                                                                                            height="20px"
+                                                                                                            src="https://image.flaticon.com/icons/svg/291/291205.svg"
+                                                                                                            alt=""><img
+                            width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img
+                            width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt="">
+                </div>
+                <div class="swiper-slide-text mt-3">
+                    Web hoạt động ổn định văn minh, dịch vụ tốt, hỗ trợ nhiệt tình, luôn ủng hộ web
+
+                </div>
+                <div style="margin-top: 50px">
+                    <div class="swiper-slide-name" style="color: #ff5f5f">
+                        Nguyễn Văn Đạt
+                    </div>
+                    <div class="swiper-slide-from" style="">
+                        Viêt Nam
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-slide">
+            <div class="swiper-slide-con">
+                <img class="avatar"
+                     src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-9/45088669_579135682544245_7623162751027773440_n.jpg?_nc_cat=100&_nc_oc=AQmwPTjz1mjA1q31wZhHV9YcdibTlWl2UFvoR_iIxQVxArfpZm2bTj499d4DBv-czE8&_nc_ht=scontent.fhan9-1.fna&oh=fc3960b73d8813dd01af3d5117c32eed&oe=5D205A92"
+                     alt="">
+                <div><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg"
+                          alt=""><img width="20px" height="20px"
+                                      src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px"
+                                                                                                            height="20px"
+                                                                                                            src="https://image.flaticon.com/icons/svg/291/291205.svg"
+                                                                                                            alt=""><img
+                            width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img
+                            width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt="">
+                </div>
+
+                <div class="swiper-slide-text mt-3">
+                    Want to get our hottest travel deals top tips and advice? Subscribe us now!
+
+                </div>
+                <div style="margin-top: 50px">
+                    <div class="swiper-slide-name" style="color: #ff5f5f">
+                        John Nguyễn
+                    </div>
+                    <div class="swiper-slide-from" style="">
+                        Hoa Kì
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-slide-con">
+                <img class="avatar"
+                     src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-9/51430466_520919988431009_3028402825051766784_n.jpg?_nc_cat=101&_nc_oc=AQk1PURCmsIsodeH5_7-gY3ZpQSWUiDrEX4FAw7iqRAeC9wFsImijkuCPntzgPHt8XA&_nc_ht=scontent.fhan9-1.fna&oh=87d7c9931eb71ea74752adba93a2e1b7&oe=5CE53173"
+                     alt="">
+                <div><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg"
+                          alt=""><img width="20px" height="20px"
+                                      src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px"
+                                                                                                            height="20px"
+                                                                                                            src="https://image.flaticon.com/icons/svg/291/291205.svg"
+                                                                                                            alt=""><img
+                            width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img
+                            width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt="">
+                </div>
+
+                <div class="swiper-slide-text mt-3">
+                    Web hoạt động ổn định văn minh, dịch vụ tốt, hỗ trợ nhiệt tình, luôn ủng hộ web
+
+                </div>
+                <div style="margin-top: 50px">
+                    <div class="swiper-slide-name" style="color: #ff5f5f">
+                        Hoàng Xuân
+                    </div>
+                    <div class="swiper-slide-from" style="">
+                        Việt Nam
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-slide-con">
+                <img class="avatar"
+                     src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-9/51218136_362263624326108_1695596794324451328_n.jpg?_nc_cat=103&_nc_oc=AQl3YvSh-EZoAy_3q1eoHy657KjuvNmu6ksH76wkVXN15QGTBYoh1ZdRP3Q6cxgAdbE&_nc_ht=scontent.fhan9-1.fna&oh=719acf19c9d0e2c48b87850e10c73be2&oe=5CEB68DD"
+                     alt="">
+                <div><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg"
+                          alt=""><img width="20px" height="20px"
+                                      src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px"
+                                                                                                            height="20px"
+                                                                                                            src="https://image.flaticon.com/icons/svg/291/291205.svg"
+                                                                                                            alt=""><img
+                            width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img
+                            width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt="">
+                </div>
+
+                <div class="swiper-slide-text mt-3">
+                    Web hoạt động ổn định văn minh, dịch vụ tốt, hỗ trợ nhiệt tình, luôn ủng hộ web
+
+                </div>
+                <div style="margin-top: 50px">
+                    <div class="swiper-slide-name" style="color: #ff5f5f">
+                        Trần Thị Ngọc
+                    </div>
+                    <div class="swiper-slide-from" style="">
+                        Việt Nam
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-slide">
+            <div class="swiper-slide-con">
+                <img class="avatar"
+                     src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-9/51582850_636907910087137_5465043501282492416_o.jpg?_nc_cat=106&_nc_oc=AQmmx69hhRHknmO5rK6_LDDGCzMyaTI3xsskC3unjsTF78LkEwJmKxjDMuLiuqGr-L0&_nc_ht=scontent.fhan9-1.fna&oh=044909afe8122ef9b28e8b11c2aa6533&oe=5D24DE8F"
+                     alt="">
+                <div><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg"
+                          alt=""><img width="20px" height="20px"
+                                      src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px"
+                                                                                                            height="20px"
+                                                                                                            src="https://image.flaticon.com/icons/svg/291/291205.svg"
+                                                                                                            alt=""><img
+                            width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img
+                            width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt="">
+                </div>
+
+                <div class="swiper-slide-text mt-3">
+                    Web hoạt động ổn định văn minh, dịch vụ tốt, hỗ trợ nhiệt tình, luôn ủng hộ web
+
+                </div>
+                <div style="margin-top: 50px">
+                    <div class="swiper-slide-name" style="color: #ff5f5f">
+                        Nguyễn Thị Hoa
+                    </div>
+                    <div class="swiper-slide-from" style="">
+                        Việt Nam
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-slide-con">
+                <img class="avatar"
+                     src="https://scontent.fhan9-1.fna.fbcdn.net/v/t1.0-9/52047624_492139384650117_8820333942180675584_n.jpg?_nc_cat=110&_nc_oc=AQlFdcdss1tW-HQ-Vdao-mZ8Bc-CwH9ApufqQwFQBt9EnFXHxccDzrveiTSb1K3n-Qs&_nc_ht=scontent.fhan9-1.fna&oh=58908a4c6825ebeab965d52b5bf3048c&oe=5CE7DA21"
+                     alt="">
+                <div><img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg"
+                          alt=""><img width="20px" height="20px"
+                                      src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img width="20px"
+                                                                                                            height="20px"
+                                                                                                            src="https://image.flaticon.com/icons/svg/291/291205.svg"
+                                                                                                            alt=""><img
+                            width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt=""><img
+                            width="20px" height="20px" src="https://image.flaticon.com/icons/svg/291/291205.svg" alt="">
+                </div>
+
+                <div class="swiper-slide-text mt-3">
+                    Web hoạt động ổn định văn minh, dịch vụ tốt, hỗ trợ nhiệt tình, luôn ủng hộ web
+
+                </div>
+                <div style="margin-top: 50px">
+                    <div class="swiper-slide-name" style="color: #ff5f5f">
+                        Nguyễn Quang Thành
+                    </div>
+                    <div class="swiper-slide-from" style="">
+                        Việt Nam
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+
 <footer style="background-color: #2c2e3f;font-weight: 500;padding-top: 10px;width: 100%; ">
     <div class="container" style="background-color: #2c2e3f">
         <div class="row mt-5 mb-5">
@@ -683,11 +928,28 @@
 
 <script src="/js/jquery.stellar.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
-
+<script src="/js/ss.js"></script>
 <script src="/js/aos.js"></script>
 <script src="/js/bootstrap-datepicker.js"></script>
 <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>-->
 <!--<script src="js/google-map.js"></script>-->
 <script src="/js/main.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
 </body>
 </html>

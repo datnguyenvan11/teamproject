@@ -437,3 +437,41 @@ span1.onclick = function( ) {
 
 
 }
+var width = $(window).width();
+
+if (width <= 600){
+    var swiper = new Swiper('.swiper-container', {
+
+        slidesPerView: 1,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+}
+else{
+   swiper = new Swiper('.swiper-container', {
+
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+}

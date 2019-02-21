@@ -11,6 +11,8 @@ exports.routing = function (app) {
     app.post("/register", clientController.processRegister);
     app.get("/dichvu", clientController.dichvu);
     app.get("/lienhe", clientController.lienhe);
+    app.get("/danhgia", clientController.danhgia);
+
 //Trang admin
     //List Tour
     app.get("/admin/tour/list", adminController.listTour);
@@ -30,6 +32,12 @@ exports.routing = function (app) {
     app.get("/admin/list-orders", adminController.listOrder);
     //List User
     app.get("/admin/list-users", adminController.listUser);
+    app.get("/admin/dashboard", adminController.dashboard);
+
+    app.get("/admin/notifications", adminController.notifications);
+    app.get("/admin/tables", adminController.tables);
+    app.get("/admin/user", adminController.user);
+
 };
 
 
