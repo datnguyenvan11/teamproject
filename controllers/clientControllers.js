@@ -23,6 +23,7 @@ exports.danhgia = function (req, res) {
     res.render("client/contentDanhgia.ejs")
 };
 
+
 exports.processRegister = function (req, res) {
     var user = new userModel({
         firstName: req.body.firstName,
