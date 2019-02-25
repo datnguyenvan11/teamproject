@@ -175,7 +175,7 @@
             <form action="/tour/detail" method="post">
                 <div style="display: none"> id <input type="text" name="tourId" value="<%= list[i]._id%>"></div>
                 <input type="submit"  value="" class="tourng-img btn-outline-white" style="width: 100%; background-image: url('<%= list[i].tourImage %>'); background-size: cover">
-                <a href="#" ><img class=" tourng-img" src="<%= list[i].tourImage %>" alt=""></a>
+                <!--<a href="#" ><img class=" tourng-img" src="<%= list[i].tourImage %>" alt=""></a>-->
                 <div class=" tourng-name"><%= list[i].tourName %></div>
                 <div class=" tourng-gia"><strong><%= list[i].tourPrice %>đ</strong> / <%= list[i].tourPrice %> ngày</div>
                 <div class=" tourng-gt"><%= list[i].tourShortDescription %> </div>
@@ -203,17 +203,16 @@
             <!--<div style="display: none"><input type="text" name="tourCategory" value="Nha Trang"></div>-->
         </div>
     </div>
-    <!-- Hàn Quốc -->
-    <div class="mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Hàn Quốc'})" >
+    <!-- Đà Nẵng -->
+    <div class="mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Đà Nẵng'})" >
         <div class="hovereffect">
             <img class="img-responsive"
-                 src="https://www.amec.com.vn/wp-content/uploads/2016/04/93200E91-E06B-497D-803B-F7A0A6E68582.jpg"
-                 alt="">
+                 src="https://cdn.getyourguide.com/img/tour_img-1506319-146.jpg" alt="">
             <div class="overlay">
-                <a class="info" >Hàn Quốc </a>
-                <h2>Seoul</h2>
+                <a class="info" >Đà Nẵng </a>
+                <h2>Cây Cầu Vàng</h2>
             </div>
-            <div style="display: none"><input type="text" name="tourCategory" value="Hàn Quốc"></div>
+            <div style="display: none"><input type="text" name="tourCategory" value="Đà Nẵng"></div>
         </div>
     </div>
     <!-- Huế -->
@@ -228,42 +227,41 @@
             </div>
         </div>
     </div>
-    <!-- Nhật Bản -->
-    <div class="mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Nhật Bản'})">
+    <!-- Phú Quốc-->
+    <div class="mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Phú Quốc'})">
         <div class="hovereffect">
             <img class="img-responsive"
-                 src="https://tourdulichnhatban.info/view/at_nui-phu-si-o-nhat-ban_9485680fb8c352c136bfbece80b81a3b.jpg"
-                 alt="">
+                 src="https://travel.com.vn/Images/destination/tf_141226_bai-bien-phu-quoc.jpg" alt="">
             <div class="overlay">
-                <a class="info" href="#">Nhật Bản</a>
-                <h2>Núi Phú Sĩ </h2>
+                <a class="info" href="#">Phú Quốc</a>
+                <h2>Bãi Sao</h2>
             </div>
         </div>
     </div>
 </div>
 
 <div class="row col-lg-12 none " style="; margin-left: 4px;background-color: white">
-    <!--Đà Nẵng-->
-    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Đà Nẵng'})">
+    <!--Hàn Quốc-->
+    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Hàn Quốc'})">
         <div class="hovereffect">
             <img class="img-responsive"
-                 src="https://cdn.getyourguide.com/img/tour_img-1506319-146.jpg"
+                 src="https://www.amec.com.vn/wp-content/uploads/2016/04/93200E91-E06B-497D-803B-F7A0A6E68582.jpg"
                  alt="">
             <div class="overlay">
-                <a class="info" href="#">Đà Nẵng</a>
-                <h2>Cây cầu vàng </h2>
+                <a class="info" href="#">Hàn Quốc </a>
+                <h2>Seoul</h2>
             </div>
         </div>
     </div>
-    <!-- Hà Nội -->
-    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Hà Nội'})">
+    <!-- Nhật Bản -->
+    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Nhật Bản '})">
         <div class="hovereffect">
             <img class="img-responsive"
-                 src="https://znews-photo.zadn.vn/Uploaded/mdf_kxrxdf/2018_12_07/1.jpg"
+                 src="https://tourdulichnhatban.info/view/at_nui-phu-si-o-nhat-ban_9485680fb8c352c136bfbece80b81a3b.jpg"
                  alt="">
             <div class="overlay">
-                <a class="info" href="#">Hà Nội </a>
-                <h2>Phố cổ - Hồ Gươm</h2>
+                <a class="info" href="#">Nhật Bản </a>
+                <h2>Hoa Anh Đào</h2>
             </div>
         </div>
     </div>
@@ -279,15 +277,15 @@
             </div>
         </div>
     </div>
-    <!-- Quảng Bình -->
-    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: ''})">
+    <!-- Singgapore -->
+    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Singapore '})">
         <div class="hovereffect">
             <img class="img-responsive"
-                 src="https://lh3.googleusercontent.com/-FZoJphRpktU/WxEgKSkhEdI/AAAAAAAAAVc/7PXZ6fY6jeYpk9sKVxFI2vJjIEKn2gQLQCLIBGAYYCw/w357-h238-k-no/"
+                 src="https://travel.com.vn/Images/destination/tf_160121_merlion-singapore-by-night1.jpg"
                  alt="">
             <div class="overlay">
-                <a class="info" href="#">Quảng Bình </a>
-                <h2>Phong Nha - Kẻ Bàng</h2>
+                <a class="info" href="#">Singapore </a>
+                <h2>Thuỷ Cung Sea</h2>
             </div>
         </div>
     </div>
