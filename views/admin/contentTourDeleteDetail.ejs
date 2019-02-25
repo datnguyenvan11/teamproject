@@ -1,0 +1,68 @@
+<% include headerAdmin.ejs %>>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-info">
+                        <h4 class="card-title">Chi tiết Tour đã xóa</h4>
+                    </div>
+                    <div class="card-body">
+                        <div style="width: 150px; height: 150px; background-image: url('<%= list.tourImage %>'); background-size: cover">
+                            &nbsp
+                        </div>
+                        <div>Tên tour: <%= list.tourName %></div>
+                        <div>Mã tour: <%= list.tourFId %></div>
+                        <div>Ngày khỏi hành: <%= list.tourDayGo %> </div>
+                        <div>Tổng số ngày: <%= list.tourTotalDay %></div>
+                        <div>Giá: <%= list.tourPrice %></div>
+                        <div>Số chỗ: <%= list.tourNumberOfSeats %></div>
+                        <div>Số chỗ hiện còn: <%= list.tourNumberOfSeatsAvailable %></div>
+                        <div>Mô tả ngắn về tour: <%= list.tourShortDescription %></div>
+
+                        <div>Loại tour: <%= list.tourType %></div>
+                        <div>Tour Category: <%= list.tourCategory %></div>
+
+                        <p>Chương trình tour</p>
+                        <div>Chương trình tour: <%= list.tourDescription %></div>
+
+                        <p>Chi tiết tour</p>
+                        <p>Thông tin chuyến bay</p>
+                        <div>Ngày đi: <%= list.tourDateGo %></div>
+                        <div>Đến: <%= list.tourDateGoCome %></div>
+                        <div>Chuyến bay: <%= list.tourGoFlight %></div>
+                        <div>Ngày về: <%= list.tourDateReturn %></div>
+                        <div>Đến: <%= list.tourDateReturnCome %></div>
+                        <div>Chuyến bay: <%= list.tourReturnFlight %></div>
+
+                        <p>Thông tin khách sạn</p>
+                        <div>Khách sạn: <%= list.tourHotel %></div>
+
+                        <p>Thông tin hướng dẫn viên</p>
+                        <div>Tên: <%= list.tourGuideName %></div>
+                        <div>Địa chỉ: <%= list.tourGuideAddress %></div>
+                        <div>Số điện thoại: <%= list.tourGuideTel %></div>
+
+                        <p>Thông tin tập trung</p>
+                        <div>Ngày giờ tập trung: <%= list.tourFocusDay %></div>
+                        <div>Nơi tập trung : <%= list.tourConcentratedPlace %></div>
+
+                        <div>Ghi chú: <%= list.tourNote %></div>
+
+                        <div>Trạng thái tour:<% if(list.action == 1) { %> <p>Đang hoạt động</p> <% } else if (list.action == 0){ %> <p>Đã xóa</p> <% } %></div>
+                        <div>Thời gian tạo: <%= list.createdAt %></div>
+                        <div>Thời gian sửa: <%= list.updateAt %></div>
+                        <div>Thời gian xóa: <%= list.deleteAt %></div>
+                        <form action="/admin/tour/edit" method="post">
+                            <div style="display: none"> id <input type="text" name="tourId" value="<%= list._id%>"></div>
+                            <div>
+                                <input type="submit" class="btn btn-info pull-center" value="Sửa tour">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include footerAdmin.ejs %>

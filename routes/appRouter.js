@@ -2,42 +2,47 @@ var adminController = require('../controllers/adminControllers');
 var clientController = require('../controllers/clientControllers');
 
 exports.routing = function (app) {
-//Trang client
-    //Đăng nhập người dùng
-    app.get("/", clientController.generateLogin);
-    app.post("/", clientController.processLogin);
-    //Đăng ký người dùng
-    app.get("/register", clientController.generateRegister);
-    app.post("/register", clientController.processRegister);
-    app.get("/dichvu", clientController.dichvu);
-    app.get("/lienhe", clientController.lienhe);
-    app.get("/danhgia", clientController.danhgia);
+//Client Page
+    //home page
+    app.get("/", clientController.home);
+    //Tour Detail
+    app.post("/tour/detail", clientController.tourDetail);
+    //Tour List
+    app.post("/tour/list", clientController.tourList);
+    //service
+    app.get("/service", clientController.service);
+    //rate
+    app.get("/rate", clientController.rate);
+    //contact
+    app.get("/contact", clientController.contact);
 
-//Trang admin
-    //List Tour
+//Admin Page
+    //Admin home
+    app.get("/admin/home", adminController.generateAdminHome);
+    //Admin List
+    app.get("/admin/list", adminController.listAdmin);
+    //Tour Create
+    app.get("/admin/tour/create", adminController.generateTourCreate);
+    app.post("/admin/tour/create/save", adminController.processTourCreate);
+    //Tour Create Success
+    // app.get("/admin/tour/create/success", adminController.generateTourCreateSuccess);
+    //Tour List
     app.get("/admin/tour/list", adminController.listTour);
-    //Create tour
-    app.get("/admin/tour/create", adminController.generateCreateTourFom);
-    app.post("/admin/tour/create/save", adminController.processCreateTour);
-    //Edit tour (sửa, xóa mềm)
-    app.get("/admin/tour/edit", adminController.generateEditTourFom);
-    app.post("/admin/tour/edit/save", adminController.processEditTour);
-    app.get('/admin/tour/delete', adminController.generateDeleteTourFom);
-    app.post('/admin/tour/delete/save', adminController.processDeleteTour);
-    //List tour đã xóa
-    app.get('/admin/tour/list/delete', adminController.listDeleteTour);
-    //List admin
-    app.get("/admin/list-admins", adminController.listAdmin);
-    //List Order
-    app.get("/admin/list-orders", adminController.listOrder);
-    //List User
-    app.get("/admin/list-users", adminController.listUser);
-    app.get("/admin/dashboard", adminController.dashboard);
-
-    app.get("/admin/notifications", adminController.notifications);
-    app.get("/admin/tables", adminController.tables);
-    app.get("/admin/user", adminController.user);
-
+    //Tour Detail
+    app.post("/admin/tour/detail", adminController.generateTourDetail);
+    //Tour Edit
+    app.post("/admin/tour/edit", adminController.processEditTour);
+    app.post("/admin/tour/edit/save", adminController.processEditTourSave);
+    //Tour Delete
+    app.post("/admin/tour/delete", adminController.processDeleteTour);
+    //Tour Deleted List
+    app.get("/admin/tour/delete/list", adminController.listDeleteTour);
+    //Tour Delete Detail
+    app.post("/admin/tour/delete/detail", adminController.generateTourDeleteDetail);
+    //Order List
+    app.get("/admin/order/list", adminController.listOrder);
+    //err
+    app.get("/admin/err", adminController.generateErr);
 };
 
 

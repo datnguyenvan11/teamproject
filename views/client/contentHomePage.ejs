@@ -1,95 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Travel Tour</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/hh.css">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    -->
-    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="/css/animate.css">
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/css/magnific-popup.css">
-    <link rel="stylesheet" href="/css/aos.css">
-    <link rel="stylesheet" href="/css/ionicons.min.css">
-    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="/css/jquery.timepicker.css">
-    <link rel="stylesheet" href="/css/flaticon.css">
-    <link rel="stylesheet" href="/css/icomoon.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/home2.css">
-    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+<!--inlude header-->
+<% include headerClient.ejs %>
 
-
-    <style>
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-            margin-top: 90px;
-        }
-
-        .swiper-slide {
-            height: 420px;
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-        }
-
-        .swiper-slide-con {
-            height: 350px;
-            width: 90%;
-            border: 1px solid #afafaf;
-
-        }
-
-        .swiper-slide-con .avatar {
-            margin-top: -30px;
-            width: 120px;
-            height: 120px;
-            border-radius: 120px;
-
-        }
-
-        .swiper-slide-text {
-            text-align: center;
-        }
-
-        @import url('https://fonts.googleapis.com/css?family=Montserrat&subset=vietnamese');
-        * {
-            font-family: sans-serif;
-        }
-        #ftco-nav ul li a {
-            color: white;
-        }
-        .nav1 {
-            border-bottom: 2px solid #69abdc;
-        }
-    </style>
-
-</head>
-<body>
-
-
+<!--nav-->
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="index.html"
-           style=" color: #e36921;font-size: 25px;font-family:-apple-system"> <img width="70px" height="70px" src="https://logopond.com/logos/eef0d9fa9f3d70035ef32fcd5fcc5b6e.png" alt=""> Pleasant Tour
+        <a class="navbar-brand" href="/"
+           style=" color: #e36921;font-size: 25px;font-family:-apple-system"> <img width="70px" height="70px" src="/" alt=""> Pleasant Tour
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,14 +15,16 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active nav1 "><a href="/" class="nav-link" style="color: white">Trang chủ </a>
                 </li>
-                <li class="nav-item"><a href="" class="nav-link">Tours</a></li>
-                <li class="nav-item"><a href="/dichvu" class="nav-link">Dịch vụ</a></li>
-                <li class="nav-item"><a href="/danhgia" class="nav-link">Đánh giá</a></li>
-                <li class="nav-item"><a href="/lienhe" class="nav-link">Liên hệ </a></li>
+                <li class="nav-item"><a href="/" class="nav-link">Tours</a></li>
+                <li class="nav-item"><a href="/service" class="nav-link">Dịch vụ</a></li>
+                <li class="nav-item"><a href="/rate" class="nav-link">Đánh giá</a></li>
+                <li class="nav-item"><a href="/contact" class="nav-link">Liên hệ </a></li>
             </ul>
         </div>
     </div>
 </nav>
+
+<!--carousel-->
 <section class="home-slider owl-carousel">
     <div class="slider-item"
          style="background-image: url(http://hoabinhtourist.com/public/images/products/383/phuong-hoang-co-tran.jpg);">
@@ -142,7 +60,7 @@
         </div>
     </div>
 </section>
-
+<!--search-->
 <div class="ftco-section-search">
     <div class="container">
         <div class="row">
@@ -182,14 +100,11 @@
                             </form>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
 
 <div class="row " style="padding: 0;margin: 0" >
     <div class="col-lg-6" style="padding: 0;margin: 0">
@@ -201,11 +116,6 @@
         <img width="100%" src="https://edulinks.vn/wp-content/uploads/2018/06/viagem-internacional-1.jpg" alt="">
     </div>
     <div class="col-lg-6" style="padding: 70px;" >
-
-
-
-
-
         Pleasant l&agrave; c&ocirc;ng ty lữ h&agrave;nh số 1 Việt Nam, chuy&ecirc;n tổ chức c&aacute;c
         tour du lịch nước ngo&agrave;i, với gần 1.000 tuyến khắp 5 ch&acirc;u. Bạn sẽ c&oacute; dịp kh&aacute;m
         ph&aacute; những miền đất mới tại c&aacute;c nước Đ&ocirc;ng Nam &Aacute;, Ch&acirc;u &Aacute;, ch&acirc;u
@@ -223,17 +133,13 @@
     margin-right: 1%;margin-top: 7%;">
     <div class="col-lg-12" style="border-bottom: 1px solid orange">
         <h3 class="title-2">Khám phá những địa điểm tốt nhất ở Việt Nam</h3>
-
     </div>
-
 
     <div class="box-1 col-lg-3 mt-4">
         <a href="#">
         <img class=" img-box" src="https://travel.com.vn/Images/tour/tfd_170904115223_073780.jpg" alt="">
-
         <h5 class="text-word">Đà Nẵng - Bà Nà Hills </h5>
         </a>
-
     </div>
 
     <div class="box-1 col-lg-3 mt-4">
@@ -241,8 +147,6 @@
             <img class="img-box" src="https://znews-photo.zadn.vn/w660/Uploaded/jac_iik/2014_08_08/20_1.jpg" alt="">
             <h5 class="text-word">Vịnh Hạ Long - Cát Bà </h5>
         </a>
-
-
     </div>
 
     <div class="box-1 col-lg-3 mt-4">
@@ -251,7 +155,6 @@
                          alt="">
             <h5 class="text-word">Nha Trang - Khánh Hoà </h5>
         </a>
-
     </div>
 
     <div class="box-1 col-lg-3 mt-4">
@@ -261,154 +164,60 @@
                  alt="">
             <h5 class="text-word">Mộc Châu - Sơn La </h5>
         </a>
-
     </div>
 </div>
 
-
-<div class="row col-lg-12 " style="  margin-left: 4px ;
-    ;margin-top: 7%;background-color: white">
-    <div class="col-lg-12" style="border-bottom: 1px solid orange;text-align: center"><h3 class="title-2 mt-4">Hot Tour
-        </h3>
-    </div>
-
-
-    <div class="col-lg-3 mt-3 tourng" style="text-align: center">
-        <a href="#"><img class=" tourng-img"
-                         src="https://travel.com.vn/Images/destination/tf_160108_Merlion6_resize.jpg" alt=""></a>
-        <a href="#">
-            <div class=" tourng-name">Singapore (Tham quan đầy đủ, khách sạn 4*,Tour Tiêu Chuẩn)</div>
-        </a>
-        <div class=" tourng-gia"><strong>16.000.000đ</strong> / 3 ngày</div>
-        <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
-            Jetstar).
-            -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
+<!--block hot tour-->
+<div class="row col-lg-12" style="margin-left: 4px ;margin-top: 7%;background-color: white">
+    <div class="col-lg-12" style="border-bottom: 1px solid orange;text-align: center"><h3 class="title-2 mt-4">Hot Tour</h3></div>
+    <% for (var i = list.length - 1; i >= list.length - 8; i--){ %>
+        <div class="col-lg-3 mt-3 tourng" style="text-align: center">
+            <form action="/tour/detail" method="post">
+                <div style="display: none"> id <input type="text" name="tourId" value="<%= list[i]._id%>"></div>
+                <input type="submit"  value="" class="tourng-img btn-outline-white" style="width: 100%; background-image: url('<%= list[i].tourImage %>'); background-size: cover">
+                <a href="#" ><img class=" tourng-img" src="<%= list[i].tourImage %>" alt=""></a>
+                <div class=" tourng-name"><%= list[i].tourName %></div>
+                <div class=" tourng-gia"><strong><%= list[i].tourPrice %>đ</strong> / <%= list[i].tourPrice %> ngày</div>
+                <div class=" tourng-gt"><%= list[i].tourShortDescription %> </div>
+                <div>
+                    <input type="submit" class="btn btn-info" value="Chi tiết">
+                </div>
+            </form>
         </div>
-        <!--<button type="button" class="btn btn-deep-orange">Đặt ngay</button>-->
-    </div>
-
-    <div class="col-lg-3 mt-3 tourng" style="text-align: center">
-        <a href="#"> <img class=" tourng-img"
-                          src="https://travel.com.vn/Images/tour/tfd_161107113515_997050.jpg" alt=""></a>
-        <a href="#">
-            <div class=" tourng-name">Tokyo - Odabai - Núi Phú sĩ (Thưởng thức trà đạo)</div>
-        </a>
-        <div class=" tourng-gia"><strong>40.000.000đ</strong> / 14 ngày</div>
-        <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
-            Jetstar).
-            -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
-        </div>
-        <!--<button type="button" class="btn btn-deep-orange ">Đặt ngay</button>-->
-
-    </div>
-
-    <div class="col-lg-3 mt-3 tourng" style="text-align: center">
-        <a href="#"> <img class=" tourng-img"
-                          src="https://cdn2.ivivu.com/2018/08/02/17/ivivu-cong-vien-disneyland.jpg" alt=""></a>
-        <a href="#">
-            <div class=" tourng-name">HongKong city tour - Công viên Disneyland</div>
-        </a>
-        <div class=" tourng-gia"><strong>14.499.000đ</strong> / 7 ngày</div>
-        <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
-            Jetstar).
-            -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
-        </div>
-    </div>
-
-    <div class="col-lg-3 mt-3 tourng" style="text-align: center">
-        <a href="#"> <img class=" tourng-img"
-                          src="https://travel.com.vn/Images/destination/tf_160711_phuket.jpg" alt=""></a>
-        <a href="#">
-            <div class=" tourng-name">Đảo Phuket - Phi Phi (Bay thẳng, tặng vé xem phim simon)</div>
-        </a>
-        <div class=" tourng-gia"><strong>10.199.000đ</strong> / 5 ngày</div>
-        <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
-            Jetstar).
-            -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
-        </div>
-
-    </div>
-
-    <div class="col-lg-3 tourng" style="text-align: center; margin-top: 30px;margin-bottom: 30px;">
-        <img class=" tourng-img"
-             src="https://travel.com.vn/Images/destination/tf_170301093758_045662.jpg" alt="">
-        <div class=" tourng-name">BangKok - Pattaya (Tặng bufeet Baiyoke Sky)</div>
-        <div class=" tourng-gia"><strong>9.500.000đ</strong> / 4 ngày</div>
-        <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
-            Jetstar).
-             -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
-        </div>
-    </div>
-
-    <div class="col-lg-3 tourng" style="text-align: center; margin-top: 30px;margin-bottom: 30px;">
-        <img class=" tourng-img"
-             src="https://travel.com.vn/Images/destination/tf_160906085513_856952.jpg" alt="">
-        <div class=" tourng-name">Dubai - Abu Dhabi ( KS 4*, Thưởng thức cà phê băng)</div>
-        <div class=" tourng-gia"><strong>22.095.000đ</strong> / 6 ngày</div>
-        <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
-            Jetstar).
-             -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
-        </div>
-
-
-    </div>
-
-    <div class="col-lg-3 tourng" style="text-align: center; margin-top: 30px;margin-bottom: 30px;">
-        <img class=" tourng-img"
-             src="https://cdn2.ivivu.com/2017/06/16/15/ivivu-christ-church-melaka.jpg" alt="">
-        <div class=" tourng-name">Tour Singapore 6N5D: Singapore - Malaysia</div>
-        <div class=" tourng-gia"><strong>18.350.000đ</strong> / 6 ngày</div>
-        <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
-            Jetstar).
-             -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
-        </div>
-    </div>
-
-    <div class="col-lg-3 tourng" style="text-align: center; margin-top: 30px;margin-bottom: 30px;">
-        <img class=" tourng-img"
-             src="https://cdn2.ivivu.com/2018/10/26/17/ivivu-osaka-castle-204x153.jpg" alt="">
-        <div class=" tourng-name">Tour Nhật Bản 3N3D: Kansai - Kyoto - Osaka</div>
-        <div class=" tourng-gia"><strong>25.450.000đ</strong> / 4 ngày</div>
-        <div class=" tourng-gt">- Vé máy bay khứ hồi, vé chặng nội địa Úc ( Hàng Không Qantas, Virgin hoặc
-            Jetstar).
-             -Thuế phi trường hai nước, phụ phí xăng dầu và bảo hiểm hàng không.
-        </div>
-
-    </div>
-
+    <% } %>
 </div>
+<!-- block category -->
 <div class="row col-lg-12 none " style="  margin-left: 4px ;
     ;margin-top: 7%;background-color: white">
-    <div class="col-lg-12" style="border-bottom: 1px solid orange"><h3 class="title-2 mt-4">Những địa điểm được yêu
-            thích </h3>
-    </div>
-    <div class=" mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="col-lg-12" style="border-bottom: 1px solid orange"><h3 class="title-2 mt-4">Những địa điểm được yêu thích </h3></div>
+    <!--Khánh Hòa-->
+    <div class=" mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Khánh Hòa'})">
         <div class="hovereffect">
             <img class="img-responsive"
-                 src="https://cdn1.ivivu.com/iVivu/2019/01/14/14/khu-nghi-duong-six-senses-ninh-van-bay-nha-trang-41-800x450.png"
-                 alt="">
+             src="https://cdn1.ivivu.com/iVivu/2019/01/14/14/khu-nghi-duong-six-senses-ninh-van-bay-nha-trang-41-800x450.png"
+             alt="">
             <div class="overlay">
-                <a class="info" href="contentTourNhatrang.ejs">Khánh Hoà </a>
+                <a class="info">Khánh Hòa</a>
                 <h2>Nha Trang</h2>
-
-
             </div>
+            <!--<div style="display: none"><input type="text" name="tourCategory" value="Nha Trang"></div>-->
         </div>
     </div>
-    <div class="mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <!-- Hàn Quốc -->
+    <div class="mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Hàn Quốc'})" >
         <div class="hovereffect">
             <img class="img-responsive"
                  src="https://www.amec.com.vn/wp-content/uploads/2016/04/93200E91-E06B-497D-803B-F7A0A6E68582.jpg"
                  alt="">
             <div class="overlay">
-                <a class="info" href="contentTourHanQuoc.ejs">Hàn Quốc </a>
+                <a class="info" >Hàn Quốc </a>
                 <h2>Seoul</h2>
-
-
             </div>
+            <div style="display: none"><input type="text" name="tourCategory" value="Hàn Quốc"></div>
         </div>
     </div>
-    <div class=" mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <!-- Huế -->
+    <div class=" mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Huế'})">
         <div class="hovereffect">
             <img class="img-responsive"
                  src="http://media.techz.vn/upload/2013/09/10/image-1378797827-large.jpg"
@@ -416,30 +225,26 @@
             <div class="overlay">
                 <a class="info" href="#">Huế</a>
                 <h2>Cung đình huế</h2>
-
-
             </div>
         </div>
     </div>
-    <div class="mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <!-- Nhật Bản -->
+    <div class="mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Nhật Bản'})">
         <div class="hovereffect">
             <img class="img-responsive"
                  src="https://tourdulichnhatban.info/view/at_nui-phu-si-o-nhat-ban_9485680fb8c352c136bfbece80b81a3b.jpg"
                  alt="">
             <div class="overlay">
-                <a class="info" href="#">Nhật Bản </a>
+                <a class="info" href="#">Nhật Bản</a>
                 <h2>Núi Phú Sĩ </h2>
-
-
             </div>
         </div>
     </div>
 </div>
 
-<div class="row col-lg-12 none " style=" ;
-    margin-left: 4px;background-color: white">
-
-    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12">
+<div class="row col-lg-12 none " style="; margin-left: 4px;background-color: white">
+    <!--Đà Nẵng-->
+    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Đà Nẵng'})">
         <div class="hovereffect">
             <img class="img-responsive"
                  src="https://cdn.getyourguide.com/img/tour_img-1506319-146.jpg"
@@ -447,12 +252,11 @@
             <div class="overlay">
                 <a class="info" href="#">Đà Nẵng</a>
                 <h2>Cây cầu vàng </h2>
-
-
             </div>
         </div>
     </div>
-    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <!-- Hà Nội -->
+    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Hà Nội'})">
         <div class="hovereffect">
             <img class="img-responsive"
                  src="https://znews-photo.zadn.vn/Uploaded/mdf_kxrxdf/2018_12_07/1.jpg"
@@ -460,12 +264,11 @@
             <div class="overlay">
                 <a class="info" href="#">Hà Nội </a>
                 <h2>Phố cổ - Hồ Gươm</h2>
-
-
             </div>
         </div>
     </div>
-    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <!-- Trung Quốc-->
+    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Trung Quốc'})">
         <div class="hovereffect">
             <img class="img-responsive"
                  src="https://media.gody.vn/images/beijing/tu-cam-thanh/12-2016/20161229030830-tu-cam-thanh-gody%20(18).jpg"
@@ -473,12 +276,11 @@
             <div class="overlay">
                 <a class="info" href="#">Trung Quốc </a>
                 <h2>Tử Cấm Thành </h2>
-
-
             </div>
         </div>
     </div>
-    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <!-- Quảng Bình -->
+    <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: ''})">
         <div class="hovereffect">
             <img class="img-responsive"
                  src="https://lh3.googleusercontent.com/-FZoJphRpktU/WxEgKSkhEdI/AAAAAAAAAVc/7PXZ6fY6jeYpk9sKVxFI2vJjIEKn2gQLQCLIBGAYYCw/w357-h238-k-no/"
@@ -486,14 +288,11 @@
             <div class="overlay">
                 <a class="info" href="#">Quảng Bình </a>
                 <h2>Phong Nha - Kẻ Bàng</h2>
-
-
             </div>
         </div>
     </div>
-
-
 </div>
+
 <div class="gt" style="text-align: center">
     <div class="row pad" style="margin: 0">
 
@@ -754,196 +553,58 @@
     <div class="swiper-button-prev"></div>
 </div>
 
+<!--<div class="stars">-->
+<!--<form action="">-->
+<!--<input class="star star-5" id="star-5" type="radio" name="star"/>-->
+<!--<label class="star star-5" for="star-5"></label>-->
+<!--<input class="star star-4" id="star-4" type="radio" name="star"/>-->
+<!--<label class="star star-4" for="star-4"></label>-->
+<!--<input class="star star-3" id="star-3" type="radio" name="star"/>-->
+<!--<label class="star star-3" for="star-3"></label>-->
+<!--<input class="star star-2" id="star-2" type="radio" name="star"/>-->
+<!--<label class="star star-2" for="star-2"></label>-->
+<!--<input class="star star-1" id="star-1" type="radio" name="star"/>-->
+<!--<label class="star star-1" for="star-1"></label>-->
+<!--</form>-->
+<!--</div>-->
 
-<footer style="background-color: #2c2e3f;font-weight: 500;padding-top: 10px;width: 100%; ">
-    <div class="container" style="background-color: #2c2e3f">
-        <div class="row mt-5 mb-5">
-            <div class="row col-lg-3 ml-5 lienhe">
-                <h5 class="connect">Kết nối với chúng tôi </h5>
-                <p class="footer-img col-lg-12" style="color: white">
-                    <img src="https://travel.com.vn/Content/themeSummer/img/fb.png" alt="">
-                    <a style="color: white" target="_blank" href="https://www.facebook.com/saker.kr"> Facebook </a></p>
-
-                <p class="footer-img col-lg-12" style="color: white">
-
-                    <img src="https://travel.com.vn/Content/themeSummer/img/gp.png" alt="">
-                    <a target="_blank" style="color: white"
-                       href="https://plus.google.com/u/0/101031412553146893296?tab=wX"> Google+ </a></p>
-
-                <p class="footer-img col-lg-12" style="color: white">
-                    <a href="">
-                        <img src="https://travel.com.vn/Content/themeSummer/img/tw.png" alt="">
-                    </a>Twitter</p>
-
-                <p class="footer-img col-lg-12" style="color: white">
-                    <a href="">
-                        <img src="https://travel.com.vn/Content/themeSummer/img/yt.png" alt="">
-                    </a>Youtube</p>
-                <p class="footer-img col-lg-12" style="color: white">
-                    <a href="">
-                        <img width="30px" height="30px" src="https://image.flaticon.com/icons/svg/1034/1034233.svg"
-                             alt="">
-                    </a> 0348431677</p>
-
-            </div>
-
-
-            <div class="row col-lg-4 thanhtoan">
-                <h5 class="col-lg-12 connect">Chấp nhận thanh toán </h5>
-                <div class="row">
-                    <div class="img-footer col-3">
-                        <img src="https://travel.com.vn/Content/themeSummer/img/123pay.png"
-                             alt="">
-                    </div>
-
-                    <div class="img-footer col-3">
-                        <img src="https://travel.com.vn/Content/themeSummer/img/visa.png" alt="">
-                    </div>
-
-                    <div class="img-footer col-3">
-                        <img src="https://travel.com.vn/Content/themeSummer/img/master.png" alt="">
-                    </div>
-
-
-                    <div class="img-footer col-3">
-                        <img src="https://travel.com.vn/Content/themeSummer/img/vnpay.jpg" alt="">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="img-footer col-3">
-                        <img src="https://travel.com.vn/Content/themeSummer/img/vnpay.jpg" alt="">
-                    </div>
-
-                    <div class="img-footer col-3">
-                        <img src="https://travel.com.vn/Content/themeSummer/img/other1.png" alt="">
-                    </div>
-
-                    <div class="img-footer col-3">
-                        <img src="https://travel.com.vn/Content/themeSummer/img/other2.png" alt="">
-                    </div>
-
-                    <div class="img-footer col-3">
-                        <img src="https://travel.com.vn/Content/themeSummer/img/other3.png" alt="">
-                    </div>
-                </div>
-
-                <div class="row ungdungdt" style="margin-top: 10px">
-                    <h5 style="margin-top: 10px;" class="  col-lg-12 connect">Ứng dụng di động</h5>
-                    <div class="col-3">
-
-                        <a href="">
-                            <img src="https://travel.com.vn/Content/themeSummer/img/a.png" alt="">
-                        </a>
-                        <p class="ungdung">Android</p>
-                    </div>
-
-                    <div class="col-3">
-                        <a href="">
-                            <img src="https://travel.com.vn/Content/themeSummer/img/i.png" alt="">
-                        </a>
-                        <p class="ungdung1">iOS</p>
-                    </div>
-
-                </div>
-
-
-            </div>
-            <div class="col-lg-2 dat-tour" style="color: white" >
-                <h5 class="  col-lg-12 connect">Đặt tour</h5>
-                <!--<div class="col-xs-4 " style="width:100%; padding: 2px"><h5 class="col-lg-12 connect">ĐỊA CHỈ CÔNG TY</h5>-->
-                <!--<iframe width="100%" height="240px"-->
-                <!--src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.096707985379!2d105.77964481486173!3d21.028816135998333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abbfa96f309f%3A0x7917af0f83effe1b!2sFPT+University+Hanoi!5e0!3m2!1sen!2s!4v1546974348745"-->
-                <!--class=" map" frameborder="0" style="border:0" allowfullscreen></iframe>-->
-                <!--</div>-->
-                <div class="col-lg-12">
-                    <a href=""> Tour nước ngoài</a>
-                </div>
-                <div class="col-lg-12">
-                    <a href="">  Tour trong nước</a>
-                </div>
-                <div class="col-lg-12">
-                    <a href=""> Dịch vụ</a>
-                </div>
-                <div class="col-lg-12">
-
-                </div>
-                <div class="col-lg-12">
-                    <a href=""> Liên hệ</a>
-                </div>
-            </div>
-            <div class="col-lg-2 dong-tour" style="color: white">
-                <h5 class="  col-lg-12 connect">Dòng tour</h5>
-                <!--<div class="col-xs-4 " style="width:100%; padding: 2px"><h5 class="col-lg-12 connect">ĐỊA CHỈ CÔNG TY</h5>-->
-                <!--<iframe width="100%" height="240px"-->
-                <!--src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.096707985379!2d105.77964481486173!3d21.028816135998333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abbfa96f309f%3A0x7917af0f83effe1b!2sFPT+University+Hanoi!5e0!3m2!1sen!2s!4v1546974348745"-->
-                <!--class=" map" frameborder="0" style="border:0" allowfullscreen></iframe>-->
-                <!--</div>-->
-                <div class="col-lg-12">
-                    <a href="">Tour cao cấp</a>
-                </div>
-                <div class="col-lg-12">
-                    <a href=""> Tour tiếu chuẩn</a>
-                </div>
-                <div class="col-lg-12">
-                    <a href=""> Tour tiết kiệm</a>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-    <div class="col-xs-12 text-center">
-        <p>Bản quyền của Pleasant ® 2016. Bảo lưu mọi quyền. Ghi rõ nguồn "www.pleasant.com.vn" ® khi sử
-            dụng lại
-            thông tin từ website này</p>
-        <p>Số GPKD: 0300465937 do Sở Kế Hoạch và Đầu Tư Thành Phố Hồ Chí Minh cấp ngày 27/09/2010</p>
-        <p>Giấy phép số: 239/GP-TTĐT do Cục Quản Lý Phát Thanh, Truyền Hình và Thông Tin Điện Tử cấp ngày
-            31/12/2008</p>
-
-    </div>
-    </div>
-
-
-
-
-
-    <!--<div class="stars">-->
-    <!--<form action="">-->
-    <!--<input class="star star-5" id="star-5" type="radio" name="star"/>-->
-    <!--<label class="star star-5" for="star-5"></label>-->
-    <!--<input class="star star-4" id="star-4" type="radio" name="star"/>-->
-    <!--<label class="star star-4" for="star-4"></label>-->
-    <!--<input class="star star-3" id="star-3" type="radio" name="star"/>-->
-    <!--<label class="star star-3" for="star-3"></label>-->
-    <!--<input class="star star-2" id="star-2" type="radio" name="star"/>-->
-    <!--<label class="star star-2" for="star-2"></label>-->
-    <!--<input class="star star-1" id="star-1" type="radio" name="star"/>-->
-    <!--<label class="star star-1" for="star-1"></label>-->
-    <!--</form>-->
-    <!--</div>-->
-</footer>
-
-
+<!--include footer-->
+<% include footerClient.ejs %>
+<!--script-->
 <script src="/js/jquery.min.js"></script>
 <script src="/js/jquery-migrate-3.0.1.min.js"></script>
 <script src="/js/jquery.easing.1.3.js"></script>
 <script src="/js/jquery.waypoints.min.js"></script>
 <script src="/js/jquery.magnific-popup.min.js"></script>
-
 <script src="/js/jquery.animateNumber.min.js"></script>
-
 <script src="/js/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-
 <script src="/js/jquery.stellar.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
 <script src="/js/ss.js"></script>
 <script src="/js/aos.js"></script>
 <script src="/js/bootstrap-datepicker.js"></script>
-<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>-->
-<!--<script src="js/google-map.js"></script>-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
 <script src="/js/main.js"></script>
-
+<script>
+    function post(path, params, method) {
+        method = method || "post";
+        var form = document.createElement("form");
+        form.setAttribute("method", method);
+        form.setAttribute("action", path);
+        for(var key in params) {
+            if(params.hasOwnProperty(key)) {
+                var hiddenField = document.createElement("input");
+                hiddenField.setAttribute("type", "hidden");
+                hiddenField.setAttribute("name", key);
+                hiddenField.setAttribute("value", params[key]);
+                form.appendChild(hiddenField);
+            }
+        }
+        document.body.appendChild(form);
+        form.submit();
+    }
+</script>
 </body>
 </html>
