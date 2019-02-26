@@ -125,6 +125,46 @@ AOS.init({
     //         document.body.style.backgroundColor = "pink";
     //     }
     // }
+
+    var scrollWindow = function() {
+        $(window).scroll(function(){
+            var $w = $(this),
+                st = $w.scrollTop(),
+                navbar = $('.ftco_navbar'),
+                sd = $('.js-scroll-wrap');
+
+            if (st > 150) {
+                if ( !navbar.hasClass('scrolled') ) {
+                    navbar.addClass('scrolled');
+                }
+            }
+            if (st < 150) {
+                if ( navbar.hasClass('scrolled') ) {
+                    navbar.removeClass('scrolled sleep');
+                }
+            }
+            if ( st > 350 ) {
+                if ( !navbar.hasClass('awake') ) {
+                    navbar.addClass('awake');
+                }
+
+                if(sd.length > 0) {
+                    sd.addClass('sleep');
+                }
+            }
+            if ( st < 350 ) {
+                if ( navbar.hasClass('awake') ) {
+                    navbar.removeClass('awake');
+                    navbar.addClass('sleep');
+                }
+                if(sd.length > 0) {
+                    sd.removeClass('sleep');
+                }
+            }
+        });
+    };
+    scrollWindow();
+
     //
     // $(window).resize(function(){
     //
@@ -135,48 +175,10 @@ AOS.init({
     //     }
     //     else{
     //
-    //         var scrollWindow = function() {
-    //             $(window).scroll(function(){
-    //                 var $w = $(this),
-    //                     st = $w.scrollTop(),
-    //                     navbar = $('.ftco_navbar'),
-    //                     sd = $('.js-scroll-wrap');
-    //
-    //                 if (st > 150) {
-    //                     if ( !navbar.hasClass('scrolled') ) {
-    //                         navbar.addClass('scrolled');
-    //                     }
-    //                 }
-    //                 if (st < 150) {
-    //                     if ( navbar.hasClass('scrolled') ) {
-    //                         navbar.removeClass('scrolled sleep');
-    //                     }
-    //                 }
-    //                 if ( st > 350 ) {
-    //                     if ( !navbar.hasClass('awake') ) {
-    //                         navbar.addClass('awake');
-    //                     }
-    //
-    //                     if(sd.length > 0) {
-    //                         sd.addClass('sleep');
-    //                     }
-    //                 }
-    //                 if ( st < 350 ) {
-    //                     if ( navbar.hasClass('awake') ) {
-    //                         navbar.removeClass('awake');
-    //                         navbar.addClass('sleep');
-    //                     }
-    //                     if(sd.length > 0) {
-    //                         sd.removeClass('sleep');
-    //                     }
-    //                 }
-    //             });
-    //         };
-    //         scrollWindow();
     //
     //     }
     // });
-
+    //
 
     var isMobile = {
         Android: function() {
@@ -416,27 +418,27 @@ AOS.init({
 
 
 })(jQuery);
-
-var modal = document.getElementById('myModal');
-
-var img = document.getElementById('img-play');
-var modalImg = document.getElementById("img01");
-
-
-img.onclick = function(){
-
-    modal.style.display = "block";
-    modalImg.src =src;
-}
-
-var span1 = document.getElementsByClassName("close")[0];
-
-span1.onclick = function( ) {
-    modal.style.display = "none";
-    modalImg.src=stop();
-
-
-}
+//
+// var modal = document.getElementById('myModal');
+//
+// var img = document.getElementById('img-play');
+// var modalImg = document.getElementById("img01");
+//
+//
+// img.onclick = function(){
+//
+//     modal.style.display = "block";
+//     modalImg.src =src;
+// }
+//
+// var span1 = document.getElementsByClassName("close")[0];
+//
+// span1.onclick = function( ) {
+//     modal.style.display = "none";
+//     modalImg.src=stop();
+//
+//
+// }
 var width = $(window).width();
 
 if (width <= 600){
@@ -458,7 +460,7 @@ if (width <= 600){
     });
 }
 else{
-   swiper = new Swiper('.swiper-container', {
+    swiper = new Swiper('.swiper-container', {
 
         slidesPerView: 4,
         spaceBetween: 30,

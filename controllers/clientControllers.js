@@ -27,7 +27,13 @@ exports.tourList = function (req, res) {
 exports.service = function (req, res) {
     res.render("client/contentService.ejs")
 };
+exports.listTour = function (req, res) {
+    var conditions = {tourCategory: req.body.tourCategory, action: 1};
+    tourModel.find(conditions, function (err, tour) {
+        res.render("client/listtour.ejs", {"list": tour});
+    });
 
+};
 //rate
 exports.rate = function (req, res) {
     res.render("client/contentRate.ejs")
@@ -35,4 +41,5 @@ exports.rate = function (req, res) {
 
 //contact
 exports.contact = function (req, res) {
-    res.render("client/contentContact.ejs")};
+    res.render("client/contentContact.ejs")
+};

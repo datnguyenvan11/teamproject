@@ -7,7 +7,7 @@ const fileUpload = require("express-fileupload");
 const cloudinary = require("cloudinary");
 const mongoose = require("mongoose");
 const mongoDb = "mongodb://admin_trung:abcd1234@ds155490.mlab.com:55490/tourist";
-var port = process.env.PORT || 9999;
+var port = process.env.PORT || 8888;
 // connect mongo
 mongoose.connect(mongoDb, {useNewUrlParser: true});
 // cloudinary
