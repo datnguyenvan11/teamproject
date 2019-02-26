@@ -1,11 +1,103 @@
-<!--inlude header-->
-<% include headerClient.ejs %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Travel Tour</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/hh.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    -->
+    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/aos.css">
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/icomoon.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home2.css">
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+    <link href="https://fonts.googleapis.com/css?family=Faster+One|Sniglet" rel="stylesheet">
 
-<!--nav-->
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin-top: 90px;
+        }
+        .info{
+            cursor: pointer;
+        }
+        .swiper-slide {
+            height: 420px;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide-con {
+            height: 350px;
+            width: 90%;
+            border: 1px solid #afafaf;
+
+        }
+
+        .logoname {
+            font-family: 'Faster One', cursive;
+        }
+
+        .swiper-slide-con .avatar {
+            margin-top: -30px;
+            width: 120px;
+            height: 120px;
+            border-radius: 120px;
+
+        }
+
+        .swiper-slide-text {
+            text-align: center;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Montserrat&subset=vietnamese');
+        * {
+            font-family: sans-serif;
+        }
+        #ftco-nav ul li a {
+            color: white;
+        }
+        .nav1 {
+            border-bottom: 2px solid #69abdc;
+        }
+    </style>
+
+</head>
+<body>
+
+
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="/"
-           style=" color: #e36921;font-size: 25px;font-family:-apple-system"> <img width="70px" height="70px" src="/" alt=""> Pleasant Tour
+           style=" color: #ff5f5f;font-size: 25px;"> <img width="70px" height="70px"
+                                                          src="http://darnlinks.info/wp-content/uploads/2018/12/free-logo-designers-free-logos-creator-make-online-elegant-logo-maker-templates.png"
+                                                          alt=""> <span class="logoname"> Pleasant Tour</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,9 +105,9 @@
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active nav1 "><a href="/" class="nav-link" style="color: white">Trang chủ </a>
+                <li class="nav-item active nav1 "><a href="/" class="nav-link">Trang chủ </a>
                 </li>
-                <li class="nav-item"><a href="/" class="nav-link">Tours</a></li>
+                <li class="nav-item"><a href="/list/tour"  class="nav-link" style="cursor: pointer">Tours</a></li>
                 <li class="nav-item"><a href="/service" class="nav-link">Dịch vụ</a></li>
                 <li class="nav-item"><a href="/rate" class="nav-link">Đánh giá</a></li>
                 <li class="nav-item"><a href="/contact" class="nav-link">Liên hệ </a></li>
@@ -23,11 +115,9 @@
         </div>
     </div>
 </nav>
-
-<!--carousel-->
 <section class="home-slider owl-carousel">
     <div class="slider-item"
-         style="background-image: url(http://hoabinhtourist.com/public/images/products/383/phuong-hoang-co-tran.jpg);">
+         style="background-image: url(https://thuthuatnhanh.com/wp-content/uploads/2018/07/tai-hinh-nen-4k-con-duong-va-hang-cay.jpg);">
         <div class="overlay"></div>
         <div class="container">
             <div class="row slider-text align-items-center">
@@ -38,7 +128,7 @@
         </div>
     </div>
     <div class="slider-item"
-         style="background-image: url(https://anhdulich.vn/templates/pictures/galleries/1495024376_Ha%CC%A3.Long.Bay.original.1080.jpg);">
+         style="background-image: url(https://i.pinimg.com/originals/b0/d7/0b/b0d70b3c42783c988d7552e4a47f3003.png);">
         <div class="overlay"></div>
         <div class="container">
             <div class="row slider-text align-items-center">
@@ -49,7 +139,7 @@
         </div>
     </div>
     <div class="slider-item"
-         style="background-image: url(https://vietsuntravel.com/@dmin/js/ckfinder/userfiles/images/MALDIVES/CHUONG%20TRINH/galleries_543_image_lg.jpg);">
+         style="background-image: url(https://hinhanhdep.net/wp-content/uploads/2017/12/hinh-nen-hoang-hon-dep-9.jpg);">
         <div class="overlay"></div>
         <div class="container">
             <div class="row slider-text align-items-center">
@@ -60,7 +150,7 @@
         </div>
     </div>
 </section>
-<!--search-->
+
 <div class="ftco-section-search">
     <div class="container">
         <div class="row">
@@ -110,7 +200,7 @@
     <div class="col-lg-6" style="padding: 0;margin: 0">
         <img class=" img-play" id="img-play" width="80px" height="80px  " src="https://image.flaticon.com/icons/svg/122/122626.svg" alt="">
         <div id="myModal" class="modal">
-            <span class="close">&times;</span>
+            <span style="margin-top: 80px" class="close">&times;</span>
             <iframe class="modal-content" id="img01" width="560" height="405" src="https://www.youtube.com/embed/I0gLzfc5Xew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <img width="100%" src="https://edulinks.vn/wp-content/uploads/2018/06/viagem-internacional-1.jpg" alt="">
@@ -137,8 +227,8 @@
 
     <div class="box-1 col-lg-3 mt-4">
         <a href="#">
-        <img class=" img-box" src="https://travel.com.vn/Images/tour/tfd_170904115223_073780.jpg" alt="">
-        <h5 class="text-word">Đà Nẵng - Bà Nà Hills </h5>
+            <img class=" img-box" src="https://travel.com.vn/Images/tour/tfd_170904115223_073780.jpg" alt="">
+            <h5 class="text-word">Đà Nẵng - Bà Nà Hills </h5>
         </a>
     </div>
 
@@ -172,21 +262,25 @@
     <div class="col-lg-12" style="border-bottom: 1px solid orange;text-align: center"><h3 class="title-2 mt-4">Hot Tour</h3></div>
     <% for (var i = list.length - 1; i >= list.length - 8; i--){ %>
         <div class="col-lg-3 mt-3 tourng" style="text-align: center">
+            <a href="#" ><img class=" tourng-img" src="<%= list[i].tourImage %>" alt=""></a>
+            <a href="#">
+                <div onclick="post('/tour/detail')" class=" tourng-name"><%= list[i].tourName %></div>
+            </a>
+            <div class=" tourng-gia"><strong><%= list[i].tourPrice %>đ</strong> /<%=list[i].tourTotalDay%>ngày</div>
+            <div class=" tourng-gt"><%= list[i].tourShortDescription %> </div>
             <form action="/tour/detail" method="post">
                 <div style="display: none"> id <input type="text" name="tourId" value="<%= list[i]._id%>"></div>
-                <input type="submit"  value="" class="tourng-img btn-outline-white" style="width: 100%; background-image: url('<%= list[i].tourImage %>'); background-size: cover">
-                <!--<a href="#" ><img class=" tourng-img" src="<%= list[i].tourImage %>" alt=""></a>-->
-                <div class=" tourng-name"><%= list[i].tourName %></div>
-                <div class=" tourng-gia"><strong><%= list[i].tourPrice %>đ</strong> / <%= list[i].tourPrice %> ngày</div>
-                <div class=" tourng-gt"><%= list[i].tourShortDescription %> </div>
-                <div>
-                    <input type="submit" class="btn btn-info" value="Chi tiết">
-                </div>
+                <div><input type="submit" class="btn btn-danger btn-sm" style="width: 100%;font-size: 13px" value="Chi tiết "></div>
             </form>
         </div>
+
     <% } %>
-</div>
-<!-- block category -->
+
+
+
+
+
+</div><!-- block category -->
 <div class="row col-lg-12 none " style="  margin-left: 4px ;
     ;margin-top: 7%;background-color: white">
     <div class="col-lg-12" style="border-bottom: 1px solid orange"><h3 class="title-2 mt-4">Những địa điểm được yêu thích </h3></div>
@@ -194,8 +288,8 @@
     <div class=" mt-3 col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Khánh Hòa'})">
         <div class="hovereffect">
             <img class="img-responsive"
-             src="https://cdn1.ivivu.com/iVivu/2019/01/14/14/khu-nghi-duong-six-senses-ninh-van-bay-nha-trang-41-800x450.png"
-             alt="">
+                 src="https://cdn1.ivivu.com/iVivu/2019/01/14/14/khu-nghi-duong-six-senses-ninh-van-bay-nha-trang-41-800x450.png"
+                 alt="">
             <div class="overlay">
                 <a class="info">Khánh Hòa</a>
                 <h2>Nha Trang</h2>
@@ -257,7 +351,7 @@
     <div class=" col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="post('/tour/list', {tourCategory: 'Nhật Bản '})">
         <div class="hovereffect">
             <img class="img-responsive"
-                 src="https://tourdulichnhatban.info/view/at_nui-phu-si-o-nhat-ban_9485680fb8c352c136bfbece80b81a3b.jpg"
+                 src="https://360nhatban.net/wp/wp-content/uploads/2018/12/maxresdefault.jpg"
                  alt="">
             <div class="overlay">
                 <a class="info" href="#">Nhật Bản </a>
