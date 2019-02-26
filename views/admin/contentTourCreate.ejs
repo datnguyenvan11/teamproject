@@ -6,66 +6,214 @@
                 <div class="card">
                     <div class="card-header card-header-info">
                         <h4 class="card-title">Tạo Tour</h4>
+                        <p class="card-category">Thông tin chi tiết Tour</p>
                     </div>
-                    <form action="/admin/tour/create/save" method="post" enctype="multipart/form-data" style="color: #a3c2d1">
-                        <p>Thông tin chi tiết Tour</p>
-                        <div>Tên tour <input type="text" name="tourName"></div>
-                        <div>Mã tour <input type="text" name="tourFId"></div>
-                        <div>Ảnh <input type="file" name="tourImage" multiple="multiple"></div>
-                        <div>Ngày khỏi hành<input type="text" name="tourDayGo"></div>
-                        <div>Tổng số ngày <input type="number" name="tourTotalDay"></div>
-                        <div>Giá <input type="text" name="tourPrice"></div>
-                        <div>Số chỗ <input type="number" name="tourNumberOfSeats"></div>
-                        <div>Mô tả ngắn về tour <textarea name="tourShortDescription" id="" cols="100%" rows="3"></textarea></div>
+                    <div class="card-body">
+                        <form action="/admin/tour/create/save" method="post" enctype="multipart/form-data" style="color: #a3c2d1">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Tên Tour</label>
+                                        <input type="text" name="tourName" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Mã Tour</label>
+                                        <input type="text" name="tourFId" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>Ảnh <input type="file" name="tourImage" multiple="multiple"></div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Tổng số ngày</label>
+                                        <input type="number" name="tourTotalDay" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Giá</label>
+                                        <input type="text" name="tourPrice" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Chỗ ngồi</label>
+                                        <input type="number" name="tourNumberOfSeats" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Mô tả ngắn</label>
+                                        <textarea name="tourShortDescription" name="tourShortDescription" id="" class="form-control" cols="100%" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>Loại tour
+                                <input name="tourType" type="radio" value="Trong Nước" />Trong nước
+                                <input name="tourType" type="radio" value="Nước Ngoài" />Nước ngoài
+                            </div>
+                            <div>Trong nước
+                                <input name="tourCategory" type="radio" value="Đà Nẵng"/>Đà Nẵng
+                                <input name="tourCategory" type="radio" value="Khánh Hòa"/>Khánh Hòa
+                                <input name="tourCategory" type="radio" value="Phú Quốc"/>Phú Quốc
+                                <input name="tourCategory" type="radio" value="Huế"/>Huế
+                            </div>
+                            <div>Nước ngoài
+                                <input name="tourCategory" type="radio" value="Singapore"/>Singapore
+                                <input name="tourCategory" type="radio" value="Nhật Bản"/>Nhật Bản
+                                <input name="tourCategory" type="radio" value="Hàn Quốc"/>Hàn Quốc
+                                <input name="tourCategory" type="radio" value="Trung Quốc"/>Trung Quốc
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Chương trình tour</label>
+                                        <textarea name="tourDescription" name="tourShortDescription" id="" class="form-control" cols="100%" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<p>Chi tiết tour</p>-->
+                            <!--<p>Thông tin chuyến bay</p>-->
 
-                        <div>Loại tour
-                            <input name="tourType" type="radio" value="Trong Nước" />Trong nước
-                            <input name="tourType" type="radio" value="Nước Ngoài" />Nước ngoài
-                        </div>
-                        <div>Trong nước
-                            <input name="tourCategory" type="radio" value="Đà Nẵng"/>Đà Nẵng
-                            <input name="tourCategory" type="radio" value="Khánh Hòa"/>Khánh Hòa
-                            <input name="tourCategory" type="radio" value="Phú Quốc"/>Phú Quốc
-                            <input name="tourCategory" type="radio" value="Huế"/>Huế
-                        </div>
-                        <div>Nước ngoài
-                            <input name="tourCategory" type="radio" value="Singapore"/>Singapore
-                            <input name="tourCategory" type="radio" value="Nhật Bản"/>Nhật Bản
-                            <input name="tourCategory" type="radio" value="Hàn Quốc"/>Hàn Quốc
-                            <input name="tourCategory" type="radio" value="Trung Quốc"/>Trung Quốc
-                        </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Ngày đi</label>
+                                        <input type="text" name="tourDateGo" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Đến</label>
+                                        <input type="text" name="tourDateGoCome" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Chuyến bay</label>
+                                        <input type="text" name="tourGoFlight" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Ngày về</label>
+                                        <input type="text" name="tourDateReturn" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Đến</label>
+                                        <input type="text" name="tourDateReturnCome" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Chuyến bay</label>
+                                        <input type="text" name="tourReturnFlight" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
 
-                        <p>Chương trình tour</p>
-                        <div>Chương trình tour <textarea name="tourDescription" id="" cols="100%" rows="30"></textarea></div>
+                            <!--<p>Thông tin khách sạn</p>-->
 
-                        <p>Chi tiết tour</p>
-                        <p>Thông tin chuyến bay</p>
-                        <div>Ngày đi<input type="text" name="tourDateGo"></div>
-                        <div>Đến<input type="text" name="tourDateGoCome"></div>
-                        <div>Chuyến bay<input type="text" name="tourGoFlight"></div>
-                        <div>Ngày về<input type="text" name="tourDateReturn"></div>
-                        <div>Đến<input type="text" name="tourDateReturnCome"></div>
-                        <div>Chuyến bay<input type="text" name="tourReturnFlight"></div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Khách sạn</label>
+                                        <input type="text" name="tourHotel" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
 
-                        <p>Thông tin khách sạn</p>
-                        <div>Khách sạn<input type="text" name="tourHotel"></div>
+                            <!--<p>Thông tin hướng dẫn viên</p>-->
 
-                        <p>Thông tin hướng dẫn viên</p>
-                        <div>Tên <input type="text" name="tourGuideName"></div>
-                        <div>Địa chỉ <textarea name="tourGuideAddress" id="" cols="30" rows="10"></textarea></div>
-                        <div>Số điện thoại <input type="text" name="tourGuideTel"></div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Tên</label>
+                                        <input type="text" name="tourGuideName" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Địa chỉ</label>
+                                        <textarea name="tourGuideAddress" class="form-control" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Số điện thoại</label>
+                                        <input type="text" name="tourGuideTel" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
 
-                        <p>Thông tin tập trung</p>
-                        <div>Ngày giờ tập trung<input type="text" name="tourFocusDay"></div>
-                        <div>Nơi tập trung <input type="text" name="tourConcentratedPlace"></div>
+                            <!--<p>Thông tin tập trung</p>-->
 
-                        <p>Ghi chú</p>
-                        <div>Ghi chú <textarea name="tourNote" id="" cols="30" rows="10"></textarea></div>
-                        <div>
-                            <input type="submit" value="Lưu">
-                            <input type="reset" value="Nhập lại">
-                        </div>
-                    </form>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Ngày giờ tập trung</label>
+                                        <input type="text" name="tourFocusDay" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Nơi tập trung</label>
+                                        <input type="text" name="tourConcentratedPlace" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!--<p>Ghi chú</p>-->
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Ghi chú</label>
+                                        <textarea name="tourNote" class="form-control" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--LƯU Ý CÁI BUTTON RỒI SỬA LẠI NHÁ-->
+                            <div>
+                                <!--<button type="submit" class="btn btn-info pull-right" value="Lưu"></button>-->
+                                <!--<button type="reset" class="btn btn-info pull-right" value="Nhập lại"></button>-->
+                                <input type="submit" value="Lưu">
+                                <input type="reset" value="Nhập lại">
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </div>
