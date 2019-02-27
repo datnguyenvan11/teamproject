@@ -1,33 +1,96 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="../../public/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../../public/img/supreme-logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Admin</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+          name='viewport'/>
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="/css/material-dashboard.css" rel="stylesheet"/>
 </head>
-<body>
-<h4>Đăng ký quản trị viên</h4>
-<form action="/register" method="post" enctype="multipart/form-data">
-    <div>Họ <input type="text" name="firstName"></div>
-    <div>Tên <input type="text" name="lastName"></div>
-    <div>Email <input type="email" name="email"></div>
-    <div>Mật khẩu <input type="password" name="password"></div>
-    <div>Xác nhận mật khẩu <input type="password" name="confirmPassword"></div>
-    <div>Ngày sinh <input type="date" name="dateOfBirth"></div>
-    <div>Giới tính
-        <input name="gender" type="radio" value="Nam" />Nam
-        <input name="gender" type="radio" value="Nữ" />Nữ
-        <input name="gender" type="radio" value="Khác" />Khác
+<body class="dark-edition">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-2 col-md-3 col-lg-4"></div>
+        <div class="col-12 col-sm-8 col-md-6 col-lg-4" style="color: #a3c2d1">
+            <h4 class="pull-center text-center">Đăng ký quản trị viên</h4>
+            <form action="/admin/register" method="post" id="registerForm" enctype="multipart/form-data">
+                <div class="col-12">
+                    <div class="form-group" >
+                        <label class="bmd-label-floating">Họ</label>
+                        <input type="text" name="firstName" class="form-control">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group" >
+                        <label class="bmd-label-floating">Tên</label>
+                        <input type="text" name="lastName" class="form-control">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group" >
+                        <label class="bmd-label-floating">Email</label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group" >
+                        <label class="bmd-label-floating">Mật khẩu</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group" >
+                        <label class="bmd-label-floating">Xác nhận mật khẩu</label>
+                        <input type="password" name="confirmPassword" class="form-control">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group" >
+                        <label class="bmd-label-floating">Ngày sinh</label>
+                        <input type="date" name="dateOfBirth" class="form-control">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-control">
+                        <label class="bmd-label-floating">Giới tính</label>
+                        <input name="gender" type="radio" value="Nam" />Nam
+                        <input name="gender" type="radio" value="Nữ" />Nữ
+                        <input name="gender" type="radio" value="Khác" />Khác
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group" >
+                        <label class="bmd-label-floating">Số điện thoại</label>
+                        <input type="text" name="tell" class="form-control">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label class="bmd-label-floating">Địa chỉ </label>
+                        <textarea name="address" id="" cols="100%" rows="10" class="form-control"></textarea>
+                    </div>
+                </div>
+                <!--<div>Ảnh đại diện <input type="file" name="avatar"></div>-->
+                <div class="col-12">
+                    <div class="text-center">
+                        <input type="submit" value="Đăng ký" class="btn btn-info">
+                        <input type="reset" value="Nhập lại" class="btn btn-primary">
+                    </div>
+                    <a href="/admin/register" class="nav-link text-center">Đăng nhập</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-12 col-sm-2 col-md-3 col-lg-4">&emsp;</div>
     </div>
-    <div>Số điện thoại <input type="number" name="tell"></div>
-    <div>Địa chỉ <textarea name="address" id="" cols="100%" rows="10"></textarea></div>
-    <div>Ảnh đại diện <input type="file" name="avatar"></div>
-    <div>
-        <input type="submit" value="Đăng ký">
-        <input type="reset" value="Nhập lại">
-    </div>
-</form>
+</div>
+<script src="/js/jquery.min"></script>
+<script src="/js/jquery.validate.min.js"></script>
 </body>
 </html>
