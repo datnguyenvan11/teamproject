@@ -41,5 +41,3 @@ var tourSchema = new Schema({
 });
 
 module.exports = mongoose.model('tour', tourSchema);
-
-//cần thêm validation

@@ -1,5 +1,6 @@
 var adminController = require('../controllers/adminControllers');
 var clientController = require('../controllers/clientControllers');
+var authController = require('../controllers/authControllers');
 
 exports.routing = function (app) {
 //Client Page
@@ -9,6 +10,8 @@ exports.routing = function (app) {
     app.post("/tour/detail", clientController.tourDetail);
     //Tour List
     app.post("/tour/list", clientController.tourList);
+    //Tour list all
+    app.post("/tour/list/all", clientController.tourListAll);
     //service
     app.get("/service", clientController.service);
     //rate
@@ -17,32 +20,40 @@ exports.routing = function (app) {
     app.get("/contact", clientController.contact);
 
 //Admin Page
+    //Admin login
+    app.get("/admin", adminController.generateAdminLogin);
+    app.post("/admin/login", adminController.processAdminLogin);
+    //Admin register
+    app.get("/admin/register", adminController.generateAdminRegister);
+    app.post("/admin/register", adminController.processAdminRegister);
+    // Logout
+    app.get("/admin/logout", authController.isAuthenticated, adminController.logout);
     //Admin home
-    app.get("/admin/home", adminController.generateAdminHome);
+    app.get("/admin/home", authController.isAuthenticated, adminController.generateAdminHome);
     //Admin List
-    app.get("/admin/list", adminController.listAdmin);
+    app.get("/admin/list", authController.isAuthenticated, adminController.listAdmin);
     //Tour Create
-    app.get("/admin/tour/create", adminController.generateTourCreate);
-    app.post("/admin/tour/create/save", adminController.processTourCreate);
+    app.get("/admin/tour/create", authController.isAuthenticated, adminController.generateTourCreate);
+    app.post("/admin/tour/create/save", authController.isAuthenticated, adminController.processTourCreate);
     //Tour Create Success
     // app.get("/admin/tour/create/success", adminController.generateTourCreateSuccess);
     //Tour List
-    app.get("/admin/tour/list", adminController.listTour);
+    app.get("/admin/tour/list", authController.isAuthenticated, adminController.listTour);
     //Tour Detail
-    app.post("/admin/tour/detail", adminController.generateTourDetail);
+    app.post("/admin/tour/detail", authController.isAuthenticated, adminController.generateTourDetail);
     //Tour Edit
-    app.post("/admin/tour/edit", adminController.processEditTour);
-    app.post("/admin/tour/edit/save", adminController.processEditTourSave);
+    app.post("/admin/tour/edit", authController.isAuthenticated, adminController.processEditTour);
+    app.post("/admin/tour/edit/save", authController.isAuthenticated, adminController.processEditTourSave);
     //Tour Delete
-    app.post("/admin/tour/delete", adminController.processDeleteTour);
+    app.post("/admin/tour/delete", authController.isAuthenticated, adminController.processDeleteTour);
     //Tour Deleted List
-    app.get("/admin/tour/delete/list", adminController.listDeleteTour);
+    app.get("/admin/tour/delete/list", authController.isAuthenticated, adminController.listDeleteTour);
     //Tour Delete Detail
-    app.post("/admin/tour/delete/detail", adminController.generateTourDeleteDetail);
+    app.post("/admin/tour/delete/detail", authController.isAuthenticated, adminController.generateTourDeleteDetail);
     //Order List
-    app.get("/admin/order/list", adminController.listOrder);
+    app.get("/admin/order/list", authController.isAuthenticated, adminController.listOrder);
     //err
-    app.get("/admin/err", adminController.generateErr);
+    // app.get("/admin/err", authController.isAuthenticated, adminController.generateErr);
 };
 
 

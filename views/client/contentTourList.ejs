@@ -143,9 +143,8 @@
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active nav1 "><a href="/" class="nav-link" >Trang chủ </a>
-                </li>
-                <li class="nav-item nav6"><a href="/list/tour" class="nav-link">Tours</a></li>
+                <li class="nav-item active nav1 "><a href="/" class="nav-link" >Trang chủ </a></li>
+                <li class="nav-item nav6"><a href="/tour/list/all" class="nav-link">Tours</a></li>
                 <li class="nav-item"><a href="/dichvu" class="nav-link">Dịch vụ</a></li>
                 <li class="nav-item"><a href="/danhgia" class="nav-link">Đánh giá</a></li>
                 <li class="nav-item "><a href="/lienhe" class="nav-link">Liên hệ </a></li>
@@ -163,19 +162,18 @@
                 <div class="col-md-7 col-sm-12 ftco-animate">
                     <h5 style="color: white"><a style="font-weight: bold; color: white;margin-right: 7px" href="/">TRANG CHỦ </a> TOUR   </h5>
                     <% for (var i = list.length - 1; i >= 0; i--){ %>
-                    <h1 class="mb-3"> <%=list[i].tourCategory%>  </h1>
+                    <h1 class="mb-3"> <%= list[i].tourCategory%>  </h1>
                     <% } %>
                 </div>
             </div>
         </div>
     </div>
-
 </section>
 
 <div class="tour-p m-3">
     <div class="row p-2">
         <nav class="navbar3 navbar navbar-expand-lg navbar-light bg-light" style="width: 100%;color: black">
-            <a class="navbar-brand" href="#"> Chọn Tour</a>
+            <a class="navbar-brand" href="#">Chọn Tour</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -211,7 +209,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Cao Cấp </a>
                             <a class="dropdown-item" href="#">Tiêu Chuẩn </a>
-
                             <a class="dropdown-item" href="#">Tiết Kiêm </a>
                         </div>
                     </li>
@@ -223,8 +220,6 @@
     </div>
 </div>
 <p class="fist">Du lịch >> Danh sách tour du lịch Đà Nẵng - Cây Cầu Vàng</p>
-
-
 
 
 <div class="container-fluid pl-5 pr-5" style="min-height: 100vh">

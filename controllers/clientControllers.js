@@ -23,6 +23,14 @@ exports.tourList = function (req, res) {
     });
 };
 
+//Tour List all
+exports.tourListAll = function (req, res) {
+    var conditions = { action: 1};
+    tourModel.find(conditions, function (err, tour) {
+        res.render("client/contentTourListAll.ejs", {"list": tour});
+    });
+};
+
 //service
 exports.service = function (req, res) {
     res.render("client/contentService.ejs")
