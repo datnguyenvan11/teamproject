@@ -18,6 +18,7 @@ exports.routing = function (app) {
     app.get("/rate", clientController.rate);
     //contact
     app.get("/contact", clientController.contact);
+    app.get("/dattour", clientController.dattour);
 
 //Admin Page
     //Admin login

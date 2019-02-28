@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Travel Tour</title>
+    <title>Pleasant Tour</title>
+    <link rel="icon" href="http://darnlinks.info/wp-content/uploads/2018/12/free-logo-designers-free-logos-creator-make-online-elegant-logo-maker-templates.png">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
@@ -154,7 +156,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active  "><a href="/" class="nav-link" >Trang chủ </a>
                 </li>
-                <li class="nav-item"><a href="/tour/list/all" class="nav-link">Tours</a></li>
+                <li class="nav-item"><a  onclick="post('/tour/list/all')"  class="nav-link" style="cursor: pointer">Tours</a></li>
                 <li class="nav-item"><a href="/service" class="nav-link">Dịch vụ</a></li>
                 <li class="nav-item nav1"><a href="/rate" class="nav-link">Đánh giá</a></li>
                 <li class="nav-item"><a href="/contact" class="nav-link">Liên hệ </a></li>
@@ -599,7 +601,25 @@
 <script>
 
 </script>
-
+<script>
+    function post(path, params, method) {
+        method = method || "post";
+        var form = document.createElement("form");
+        form.setAttribute("method", method);
+        form.setAttribute("action", path);
+        for(var key in params) {
+            if(params.hasOwnProperty(key)) {
+                var hiddenField = document.createElement("input");
+                hiddenField.setAttribute("type", "hidden");
+                hiddenField.setAttribute("name", key);
+                hiddenField.setAttribute("value", params[key]);
+                form.appendChild(hiddenField);
+            }
+        }
+        document.body.appendChild(form);
+        form.submit();
+    }
+</script>
 </body>
 </html>
 

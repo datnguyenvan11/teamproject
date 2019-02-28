@@ -44,3 +44,5 @@ exports.rate = function (req, res) {
 //contact
 exports.contact = function (req, res) {
     res.render("client/contentContact.ejs")};
+exports.dattour = function (req, res) {
+    res.render("client/contentDatTour.ejs")};
