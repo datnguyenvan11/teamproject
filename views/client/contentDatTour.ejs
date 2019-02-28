@@ -152,7 +152,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active nav1 "><a href="/" class="nav-link" style="color: black">Trang chủ </a>
                 </li>
-                <li class="nav-item"><a style="color: black" href="" class="nav-link">Tours</a></li>
+                <li class="nav-item"><a href="/tour/list/all" class="nav-link">Tours</a></li>
                 <li class="nav-item"><a style="color: black" href="/service" class="nav-link">Dịch vụ</a></li>
                 <li class="nav-item"><a style="color: black" href="/rate" class="nav-link">Đánh giá</a></li>
                 <li class="nav-item"><a style="color: black" href="/contact" class="nav-link">Liên hệ </a></li>
@@ -188,14 +188,15 @@
                 <div class="tour-first m-3">
                     <div class="row p-2">
                         <div class="col-lg-4" style=" padding: 20px">
-                            <img style="height: 300px;width: 100%;" src="https://itjapan.com.vn/wp-content/uploads/2018/08/anh-dep-duong-pho-nhat-ban-11.jpg" alt="">
+                            <img style="height: 300px;width: 100%;" src='' alt="">
+                            <img src="<%= list.tourImage %>" alt="">
                             <table class="table table-bordered mt-3">
                                 <thead>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>Số ngày: 5</td>
-                                    <td style="background: red; color: white;">37,590,000 đ</td>
+                                    <td>Số ngày: <%= list.tourTotalDay %></td>
+                                    <td style="background: red; color: white;"><%= list.tourPrice %> đ</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -206,7 +207,7 @@
                                 <table class="table table-bordered">
                                     <thead>
                                     <tr>
-                                        <th scope="col">Osaka - Kyoto - Nagoya - Núi Phú Sỹ - Tokyo - Thưởng thức bò Kobe - Chiêm ngưỡng 5,000 cây hoa anh đào</th>
+                                        <th scope="col"><%=list.tourName%></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -827,7 +828,25 @@
 <!--<script src="jquery-3.3.1.min.js"></script>-->
 <!--<script src="bootstrap.min.js"></script>-->
 
-
+<script>
+    function post(path, params, method) {
+        method = method || "post";
+        var form = document.createElement("form");
+        form.setAttribute("method", method);
+        form.setAttribute("action", path);
+        for(var key in params) {
+            if(params.hasOwnProperty(key)) {
+                var hiddenField = document.createElement("input");
+                hiddenField.setAttribute("type", "hidden");
+                hiddenField.setAttribute("name", key);
+                hiddenField.setAttribute("value", params[key]);
+                form.appendChild(hiddenField);
+            }
+        }
+        document.body.appendChild(form);
+        form.submit();
+    }
+</script>
 </body>
 
 </html>

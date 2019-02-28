@@ -65,7 +65,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active nav1 "><a href="/" class="nav-link" >Trang chủ </a>
                 </li>
-                <li class="nav-item"><a href="/tour/list/all" class="nav-link">Tours</a></li>
+                <li class="nav-item"><a  onclick="post('/tour/list/all')"  class="nav-link" style="cursor: pointer">Tours</a></li>
                 <li class="nav-item"><a href="/service" class="nav-link">Dịch vụ</a></li>
                 <li class="nav-item"><a href="/rate" class="nav-link">Đánh giá</a></li>
                 <li class="nav-item nav6"><a href="/contact" class="nav-link">Liên hệ </a></li>
@@ -325,5 +325,24 @@
 <!--<script src="js/google-map.js"></script>-->
 <script src="/js/main.js"></script>
 <script src="/js/validate.js"></script>
+<script>
+    function post(path, params, method) {
+        method = method || "post";
+        var form = document.createElement("form");
+        form.setAttribute("method", method);
+        form.setAttribute("action", path);
+        for(var key in params) {
+            if(params.hasOwnProperty(key)) {
+                var hiddenField = document.createElement("input");
+                hiddenField.setAttribute("type", "hidden");
+                hiddenField.setAttribute("name", key);
+                hiddenField.setAttribute("value", params[key]);
+                form.appendChild(hiddenField);
+            }
+        }
+        document.body.appendChild(form);
+        form.submit();
+    }
+</script>
 </body>
 </html>
