@@ -163,8 +163,8 @@
             <div class="row slider-text align-items-center">
                 <div class="col-md-7 col-sm-12 ftco-animate">
                     <h5 style="color: white"><a style="font-weight: bold; color: white;margin-right: 7px" href="/">TRANG CHỦ </a> TOUR   </h5>
-                    <% for (var i = list.length - 1; i >= 0; i--){ %>
-                    <h1 class="mb-3"> <%= list[i].tourCategory%>  </h1>
+                    <% for (var i = list.length - 1; i >= list.length - 1; i--){ %>
+                    <h1 class="mb-3" > <%= list[i].tourCategory%>  </h1>
                     <% } %>
                 </div>
             </div>
@@ -221,7 +221,11 @@
         </nav>
     </div>
 </div>
-<p class="fist">Du lịch >> Danh sách tour du lịch Đà Nẵng - Cây Cầu Vàng</p>
+<p class="fist">Du lịch >> Danh sách tour du lịch
+    <% for (var i = list.length - 1; i >= list.length - 1;i--){ %>
+        <%= list[i].tourCategory %>
+    <% } %>
+</p>
 
 
 <div class="container-fluid pl-5 pr-5" style="min-height: 100vh">
