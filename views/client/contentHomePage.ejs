@@ -266,7 +266,7 @@
         <div class="col-lg-3 mt-3 tourng" style="text-align: center">
             <a href="#" ><img class=" tourng-img" src="<%= list[i].tourImage %>" alt=""></a>
             <a href="#">
-                <div onclick="post('/tour/detail')" class=" tourng-name"><%= list[i].tourName %></div>
+                <div class=" tourng-name" style="height: 50px;overflow: hidden "><%= list[i].tourName %></div>
             </a>
             <div class=" tourng-gia"><strong><%= list[i].tourPrice %>đ</strong> /<%=list[i].tourTotalDay%>ngày</div>
             <div class=" tourng-gt"><%= list[i].tourShortDescription %> </div>
