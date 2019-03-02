@@ -307,25 +307,25 @@
                             <div class="col-lg-9">
                                 <div class="name-nhatrang"><%= list[i].tourName %></div>
                                 <div class="row mt-3">
-                                    <div class="col-lg-5">
+                                    <div class="col-lg-4">
                                         <i class="fa fa-barcode" aria-hidden="true"></i><%= list[i].tourFId %>
                                     </div>
                                     <div class="col-lg-5">
                                         <i class="fa fa-calendar-o" aria-hidden="true"></i> Khởi hành: <%= list[i].tourDayGo %>
                                     </div>
-                                    <div class="col-lg-2 text-danger"><%= list[i].tourPrice %></div>
+                                    <div class="col-lg-3 text-danger" style="width: 100%"><%= list[i].tourPrice %> đ</div>
                                 </div>
                                 <div class="row mt-3">
-                                    <div class="col-lg-5">
+                                    <div class="col-lg-4">
                                         <i class="fa fa-clock-o" aria-hidden="true"></i> Số ngày: <%= list[i].tourTotalDay %>
                                     </div>
                                     <div class="col-lg-5">
                                         <i class="fa fa-user" aria-hidden="true"></i> Số chỗ còn nhận: <%= list[i].tourNumberOfSeatsAvailable %>
                                     </div>
-                                    <div class="col-lg-2">
+                                    <div class="col-lg-3">
                                         <form action="/tour/detail" method="post">
                                             <div style="display: none"> id <input type="text" name="tourId" value="<%= list[i]._id%>"></div>
-                                            <div><input type="submit" class="btn btn-danger btn-sm" style="width: 100%" value="Chi tiết"></div>
+                                            <div><input type="submit" class="btn btn-danger btn-sm" style="width: 90%" value="Chi tiết"></div>
                                         </form>
                                     </div>
                                 </div>
