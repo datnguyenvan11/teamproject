@@ -1,5 +1,6 @@
 //require model + cloudinary + config + jwt
 var tourModel = require("../models/tourModel");
+var orderModel = require("../models/orderModel");
 var cloudinary = require("cloudinary").v2;
 var adminModel = require("../models/adminModel");
 var config = require("../helpers/config");
@@ -308,5 +309,7 @@ exports.generateTourDeleteDetail = function (req, res) {
 
 //Order List
 exports.listOrder = function (req, res) {
-    res.render("admin/contentListOrder.ejs");
+    orderModel.find( function (err, order) {
+        res.render("admin/contentListOrder.ejs", {"list": order});
+    });
 };

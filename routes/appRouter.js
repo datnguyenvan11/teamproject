@@ -12,13 +12,16 @@ exports.routing = function (app) {
     app.post("/tour/list", clientController.tourList);
     //Tour list all
     app.post("/tour/list/all", clientController.tourListAll);
+    //Tour Order
+    app.post("/tour/detail/order", clientController.generateOrder);
+    app.post("/tour/detail/order/save", clientController.processOder);
     //service
     app.get("/service", clientController.service);
     //rate
     app.get("/rate", clientController.rate);
     //contact
     app.get("/contact", clientController.contact);
-    app.get("/dattour", clientController.dattour);
+
 
 //Admin Page
     //Admin login
