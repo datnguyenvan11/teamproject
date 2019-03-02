@@ -41,3 +41,71 @@ var validator=$('#contactForm').validate({
 
     },
 });
+var validato1r = $('#form3').validate({
+    rules: {
+        email: {
+            required: true,
+            email: true
+
+        },
+
+        name: {
+            required: true,
+
+        },
+        phonenumber: {
+            required: true,
+            maxlength: 10,
+            minlength: 10,
+        },
+        address: {
+            required: true,
+        },
+        person: {
+            required: true,
+        },
+        children: {
+            required: true,
+        },
+        trenho: {
+            required: true,
+        },
+
+        usernumber: {
+            required: true,
+        },
+    },
+    messages: {
+
+        name: {
+            required: '* nhập họ tên ',
+        },
+        email: {
+            required: '* nhập email',
+            email: '* nhập email đúng định dạng '
+
+        },
+
+        phonenumber: {
+            required: '* nhập số điện thoại.',
+            maxlength: '* ',
+            minlength: '* ',
+        },
+        address: {
+            required: '* Nhập địa chỉ',
+        },
+        person: {
+            required: '* ',
+        },
+        children: {
+            required: '* ',
+        },
+        trenho: {
+            required: '* ',
+        },
+
+        usernumber: {
+            required: '* ',
+        },
+    }
+});
