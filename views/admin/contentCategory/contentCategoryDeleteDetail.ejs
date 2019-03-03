@@ -1,0 +1,33 @@
+<% include ../headerAdmin.ejs %>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-info">
+                        <h4 class="card-title">Chi tiết Category đã xóa</h4>
+                    </div>
+                    <div class="card-body">
+                        <div style="width: 150px; height: 150px; background-image: url('<%= list.categoryImage %>'); background-size: cover">
+                            &nbsp
+                        </div>
+                        <div>Tên category: <%= list.categoryName %></div>
+                        <div>Loại category: <%= list.categoryType %></div>
+                        <div>Mô tả ngắn: <%= list.categoryShortDescription %></div>
+                        <div>Trạng thái: <% if(list.action == 1){ %> <p>Đang sử dụng</p> <% } else if (list.action == 0){ %><p>Đã xóa</p> <% } %></div>
+                        <div>Thời gian tạo: <%= list.createdAt %></div>
+                        <div>Thời gian sửa: <%= list.updateAt %></div>
+                        <div>Thời gian xóa: <%= list.deleteAt %></div>
+                        <form action="/admin/category/edit" method="post">
+                            <div style="display: none"> id <input type="text" name="categoryId" value="<%= list._id%>"></div>
+                            <div>
+                                <input type="submit" class="btn btn-info pull-right" value="Sửa">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ../footerAdmin.ejs %>

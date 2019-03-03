@@ -1,0 +1,59 @@
+<% include ../headerAdmin.ejs %>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-info">
+                        <h4 class="card-title">Sửa Category</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="/admin/category/edit/save" method="post" enctype="multipart/form-data" style="color: #a3c2d1">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Tên Category</label>
+                                        <input type="text" name="categoryName" class="form-control">
+                                        <div>* <%= list.categoryName %></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>Loại tour &thinsp;
+                                <input name="categoryType"  type="radio" value="Trong Nước" />Trong nước
+                                <input name="categoryType"  type="radio" value="Nước Ngoài" />Nước ngoài
+                                <div>* <%= list.categoryType %></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Mô tả ngắn</label>
+                                        <textarea name="categoryShortDescription" id="" class="form-control" cols="100%" rows="4"></textarea>
+                                        <div>* <%= list.categoryShortDescription %></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>Trạng thái:
+                                <input name="action" type="radio" value="1"/>Đang sử dụng
+                                <input name="action" type="radio" value="0"/>Xóa
+                            </div>
+                            <div>* <% if(list.action == 1){ %> <p>Đang sử dụng</p> <% } else if (list.action == 0){ %><p>Đã xóa</p> <% } %></div>
+                            <div>Ảnh <input type="file" name="categoryImage" multiple="multiple"></div><div style="width: 150px; height: 150px; background-image: url('<%= list.categoryImage %>'); background-size: cover"></div>
+
+                            <div>THÔNG TIN KHÁC</div>
+                            <div>Thời gian tạo: <%= list.createdAt %></div>
+                            <div>Thời gian sửa: <%= list.updateAt %></div>
+                            <div>Thời gian xóa: <%= list.deleteAt %></div>
+                            <div style="display: none"> id <input type="text" name="categoryId" value="<%= list._id%>"></div>
+                            <div>
+                                <input type="submit" class="btn btn-info pull-right" value="Lưu">
+                                <input type="reset" class="btn btn-info pull-right" value="Nhập lại">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ../footerAdmin.ejs %>

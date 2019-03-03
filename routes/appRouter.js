@@ -1,6 +1,7 @@
-var adminController = require('../controllers/adminControllers');
-var clientController = require('../controllers/clientControllers');
-var authController = require('../controllers/authControllers');
+const adminController = require('../controllers/adminControllers');
+const adminCategoryController = require("../controllers/adminCategoryController");
+const clientController = require('../controllers/clientControllers');
+const authController = require('../controllers/authControllers');
 
 exports.routing = function (app) {
 //Client Page
@@ -56,8 +57,24 @@ exports.routing = function (app) {
     app.post("/admin/tour/delete/detail", authController.isAuthenticated, adminController.generateTourDeleteDetail);
     //Order List
     app.get("/admin/order/list", authController.isAuthenticated, adminController.listOrder);
-    //err
-    // app.get("/admin/err", authController.isAuthenticated, adminController.generateErr);
+
+    //Category
+    //Category Create
+    app.get("/admin/category/create", adminCategoryController.generateCategoryCreate);
+    app.post("/admin/category/create/save", adminCategoryController.processCategoryCreate);
+    //Category List
+    app.get("/admin/category/list", adminCategoryController.generateCategoryList);
+    //Category Detail
+    app.post("/admin/category/detail", adminCategoryController.generateCategoryDetail);
+    //Category Edit
+    app.post("/admin/category/edit", adminCategoryController.generateCategoryEdit);
+    app.post("/admin/category/edit/save", adminCategoryController.processCategoryEdit);
+    //Category Delete
+    app.post("/admin/category/delete", adminCategoryController.processCategoryDelete);
+    //Category Delete List
+    app.get("/admin/category/delete/list", adminCategoryController.generateCategoryDeleteList);
+    //Category Delete Detail
+    app.post("/admin/category/delete/detail", adminCategoryController.generateCategoryDeleteDetail);
 };
 
 
