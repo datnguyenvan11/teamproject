@@ -186,7 +186,6 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="list-tour mt-4 bg-white p-3">
                 <div class="tour-first m-3">
-
                     <div class="row p-2">
                         <div class="col-lg-4" style=" padding: 20px">
                             <img style="height: 300px;width: 100%;" src="<%= list.tourImage %>" alt="">
@@ -196,7 +195,7 @@
                                 <tbody>
                                 <tr>
                                     <td>Số ngày: <%= list.tourTotalDay %></td>
-                                    <td style="background: red; color: white;"><%= list.price %> đ</td>
+                                    <td style="background: red; color: white;"><%= list.tourPrice %> đ</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -207,23 +206,21 @@
                                 <table class="table table-bordered">
                                     <thead>
                                     <tr>
-                                        <th scope="col">Osaka - Kyoto - Nagoya - Núi Phú Sỹ - Tokyo - Thưởng thức bò
-                                            Kobe - Chiêm ngưỡng 5,000 cây hoa anh đào
-                                        </th>
+                                        <th scope="col"><%= list.tourName%></th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>Mã tour: &nbsp NNDNG5037-001-300319VN</td>
+                                        <td>Mã tour: &nbsp <%= list.tourFId%></td>
                                     </tr>
                                     <tr>
-                                        <td>Ngày khởi hành: &nbsp &nbsp 30/03/2019 &nbsp &nbsp <i class="fa fa-calendar"></i>&nbsp Ngày khác</td>
+                                        <td>Ngày khởi hành: &nbsp &nbsp <%= list.tourDayGo%> &nbsp &nbsp <i class="fa fa-calendar"></i>&nbsp Ngày khác</td>
                                     </tr>
                                     <tr>
-                                        <td colspan="2">Nơi khởi hành: Hà Nội </td>
+                                        <td colspan="2">Nơi khởi hành: <%= list.tourConcentratedPlace%> </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="2">Số chỗ còn nhận: 5 </td>
+                                        <td colspan="2">Số chỗ còn nhận: <%= list.tourNumberOfSeatsAvailable%>  </td>
                                     </tr>
                                     <tr>
                                         <td style="color: red" colspan="2">Không áp dụng đăng kí online cho khách hàng từ 70 tuổi trở lên.Khách nữ 55 tuổi trở lên, khách nam 60 tổi trở nên vui lòng đăng kí trực tiếp tại Pleasant.</td>
@@ -258,9 +255,9 @@
                 <tbody>
                 <tr>
                     <th scope="row">Giá tour cơ bản</th>
-                    <td>37,590,000 đ</td>
-                    <td>28,192,000 đ</td>
-                    <td>11,277,000 đ</td>
+                    <td><%= list.tourPrice %> đ</td>
+                    <td><%= list.tourPriceChild %> đ</td>
+                    <td><%= list.tourPriceBaby %> đ</td>
                 </tr>
                 <tr>
                     <th scope="row">Phụ phí xăng dầu & Bảo hiểm hàng không</th>
@@ -285,7 +282,7 @@
             <h5 style="color: #ff4324">Ghi chú:</h5>
             <p>- Phụ phí thu visa tái nhập Việt Nam: 0 đ</p>
             <p>- Phụ phí thu phòng đơn: 0 đ</p>
-            <form id="form3">
+            <form id="form3" action="/tour/detail/order/save" method="post">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Email</label>
@@ -297,7 +294,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPhone">Di động</label>
-                        <input type="email" class="form-control" name="phone" id="inputPhone" placeholder="">
+                        <input type="text" class="form-control" name="phone" id="inputPhone" placeholder="">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputTelePhone">Điện thoại</label>
@@ -309,23 +306,25 @@
                     </div>
                     <div class="form-group col-md-1">
                         <label for="inputUser1">Người lớn</label>
-                        <input type="number" class="form-control" name="person" value="1" id="inputUser1"
+                        <input type="number" class="form-control" name="person"  id="inputUser1"
                                placeholder="">
                     </div>
                     <div class="form-group col-md-1">
                         <label for="inputUser2">Trẻ em</label>
-                        <input type="number" class="form-control" name="children" value="0" id="inputUser2"
+                        <input type="number" class="form-control" name="children"  id="inputUser2"
                                placeholder="">
                     </div>
                     <div class="form-group col-md-1">
                         <label for="inputUser3">Trẻ nhỏ</label>
-                        <input type="number" class="form-control" name="trenho" value="0" id="inputUser3"
+                        <input type="number" class="form-control" name="trenho"  id="inputUser3"
                                placeholder="">
                     </div>
                     <div class="form-group col-md-3">
                         <label for="inputUser4">Số khách</label>
-                        <input type="number" value="1" class="form-control" name="usernumber" id="inputUser4"
+                        <input type="number" class="form-control" name="usernumber" id="inputUser4"
                                placeholder="">
+
+                        <p id="msg-err"></p>
                     </div>
                 </div>
 
@@ -335,50 +334,52 @@
                 </div>
                 <!--<button type="submit" class="btn btn-primary">Sign in</button>-->
 
-            <h4 style="color: red">Ghi chú</h4>
-            <p>Người lớn sinh từ : 05/04/1949 đến 05/04/2007 - Trẻ em sinh từ : 06/04/2007 đến 05/04/2017 - Trẻ nhỏ sinh từ : 06/04/2017 đến 26/02/2019</p>
+                <h4 style="color: red">Ghi chú</h4>
+                <p>Người lớn sinh từ : 05/04/1949 đến 05/04/2007 - Trẻ em sinh từ : 06/04/2007 đến 05/04/2017 - Trẻ nhỏ sinh từ : 06/04/2017 đến 26/02/2019</p>
 
-            <h4 style="color: red;text-align: center; margin-top: 50px;">Xin Quý Khách Vui Lòng Chọn Hình Thức Thanh Toán</h4>
-            <div style="border:1px solid #ccc;padding: 20px 30px 20px 30px">
-                <div class="radio">
-                    <label><input type="radio" class="chkPayment" name="paymentID" value="1" checked="checked"><label class="lb_r">&nbspTiền mặt</label></label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" class="chkPayment" name="paymentID" value="2"><label class="lb_r">&nbspChuyển khoản</label></label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" class="chkPayment" name="paymentID" value="9"><label class="lb_r">&nbspATM / Internet Banking</label></label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" class="chkPayment" name="paymentID" value="15"><label class="lb_r">&nbspThẻ tín dụng </label> </label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" class="chkPayment" name="paymentID" value="16"><label class="lb_r">Thanh toán bằng quét QRCode</label></label>
-                </div>
-                <div class="row " style="padding-bottom:10px;display:none;" id="divVNPay">
-                    <div style="margin-top: 5px; margin-left: 35px; font-weight: bold; color: #d57575;">
-                        Thẻ tín dụng (VISA/MASTER/JCB) / Thẻ ATM - Dịch vụ của VNPay
+                <h4 style="color: red;text-align: center; margin-top: 50px;">Xin Quý Khách Vui Lòng Chọn Hình Thức Thanh Toán</h4>
+                <div style="border:1px solid #ccc;padding: 20px 30px 20px 30px">
+                    <div class="radio">
+                        <label><input type="radio" class="chkPayment" name="paymentID" value="Tiền mặt" checked="checked"><label class="lb_r">&nbspTiền mặt</label></label>
                     </div>
-                </div>
+                    <div class="radio">
+                        <label><input type="radio" class="chkPayment" name="paymentID" value="Chuyển khoản"><label class="lb_r">&nbspChuyển khoản</label></label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="chkPayment" name="paymentID" value="Internet Banking"><label class="lb_r">&nbspATM / Internet Banking</label></label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="chkPayment" name="paymentID" value="Thẻ tín dụng"><label class="lb_r">&nbspThẻ tín dụng </label> </label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="chkPayment" name="paymentID" value="Thanh toán bằng quét"><label class="lb_r">Thanh toán bằng quét QRCode</label></label>
+                    </div>
+                    <div class="row " style="padding-bottom:10px;display:none;" id="divVNPay">
+                        <div style="margin-top: 5px; margin-left: 35px; font-weight: bold; color: #d57575;">
+                            Thẻ tín dụng (VISA/MASTER/JCB) / Thẻ ATM - Dịch vụ của VNPay
+                        </div>
+                    </div>
 
-                <div style="border:1px solid #ccc;padding: 20px 30px 20px 30px;text-align: justify;word-wrap: break-word;height: 150px;overflow-y: scroll;line-height: 22px">
+                    <div style="border:1px solid #ccc;padding: 20px 30px 20px 30px;text-align: justify;word-wrap: break-word;height: 150px;overflow-y: scroll;line-height: 22px">
                     <div id="conditionPayment">
-
                         <title></title>
-
-
-                        <p>
-                            Quý khách vui lòng thanh toán tại bất kỳ đại lý nào của Pleasant trong và ngoài nước. <a href="https://travel.com.vn/lien-he.aspx" target="_blank">Chi tiết</a></p>
-
-
+                        <p> Quý khách vui lòng thanh toán tại bất kỳ đại lý nào của Pleasant trong và ngoài nước. <a href="https://travel.com.vn/lien-he.aspx" target="_blank">Chi tiết</a></p>
                     </div>
-
+                    </div>
                 </div>
-            </div>
-<div style="text-align: center" class="mt-5 mb-1" >
-    <input type="submit" style="background: red ;color: white ;width: 120px;height: 50px;border-radius: 1px"
-           value="Đặt Tour">
-</div>
+                <!--hide-->
+                <div style="display: none">
+                    id <input type="text" name="tourId" id="tour-id" value="<%= list._id%>">
+                    tourName: <input type="text" name="tourName" id="tour-name" value="<%= list.tourName %>">
+                    tourPrice: <input type="text" name="tourPrice" id="tour-price" value="<%= list.tourPrice %>">
+                    tourPriceChild: <input type="text" name="tourPriceChild" id="tour-price-child" value="<%= list.tourPriceChild%>">
+                    tourPriceBaby: <input type="text" name="tourPriceBaby" id="tour-price-baby" value="<%= list.tourPriceBaby%>">
+                    tourNumberOfSeatsAvailable: <input type="text" name="tourNumberOfSeatsAvailable" id="tour-number-of-seats-available" value="<%= list.tourNumberOfSeatsAvailable%>">
+                </div>
+                <div style="text-align: center" class="mt-5 mb-1" >
+                    <input type="submit" style="background: red ;color: white ;width: 120px;height: 50px;border-radius: 1px"
+                           value="Đặt Tour">
+                </div>
             </form>
         </div>
     </div>
@@ -448,6 +449,15 @@
         document.body.appendChild(form);
         form.submit();
     }
+
+    document.getElementById("form3").onchange = function () {
+        var number1 = document.getElementById("inputUser1").value;
+        var number2 = document.getElementById("inputUser2").value;
+        var number3 = document.getElementById("inputUser3").value;
+        var sum = document.getElementById("inputUser4");
+        sum.value = Math.floor(number1) + Math.floor(number2) + Math.floor(number3);
+    };
+
 </script>
 </body>
 

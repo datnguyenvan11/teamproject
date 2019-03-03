@@ -8,7 +8,36 @@
                         <h4 class="card-title">Danh sách đơn hàng</h4>
                     </div>
                     <div class="card-body">
+                        <table class="table table-hover">
+                            <thead class="text-warning">
+                            <th>STT</th>
+                            <th>Email</th>
+                            <th>Họ tên</th>
+                            <th>Tên tour</th>
+                            <th>Tổng số người</th>
+                            <!--<th>&nbsp</th>-->
+                            </thead>
+                            <% for (var i = list.length - 1; 0 <= i ; i--){ %>
+                                <tbody>
+                                <tr>
+                                    <td><%= i + 1 %></td>
+                                    <td><%= list[i].orderEmail %></td>
+                                    <td><%= list[i].orderFullName %></td>
+                                    <td><%= list[i].tourName %></td>
+                                    <td><%= list[i].orderNumberOfSeatTotal %></td>
 
+                                    <!--<td>-->
+                                        <!--<form action="/admin/tour/delete/detail" method="post">-->
+                                            <!--<div style="display: none"> id <input type="text" name="tourId" value="<%= list[i]._id%>"></div>-->
+                                            <!--<div>-->
+                                                <!--<input type="submit" class="btn btn-info pull-center" value="Chi tiết">-->
+                                            <!--</div>-->
+                                        <!--</form>-->
+                                    <!--</td>-->
+                                </tr>
+                                </tbody>
+                            <% } %>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -16,4 +45,3 @@
     </div>
 </div>
 <% include footerAdmin.ejs %>
-
