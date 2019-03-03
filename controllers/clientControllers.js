@@ -64,7 +64,7 @@ exports.processOder = function (req, res) {
             res.redirect("/");
             return
         }
-        res.redirect("/");
+        res.redirect("/order/succses");
     });
 };
 
@@ -83,3 +83,5 @@ exports.contact = function (req, res) {
     res.render("client/contentContact.ejs")};
 exports.dattour = function (req, res) {
     res.render("client/contentTourOrder.ejs")};
+exports.dattoursuccses = function (req, res) {
+    res.render("client/succsess.ejs")};
