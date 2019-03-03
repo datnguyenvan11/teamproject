@@ -236,9 +236,6 @@ exports.processEditTourSave = function (req, res) {
     if (req.body.tourNote != null && req.body.tourNote != '' ) {
         update.tourNote = req.body.tourNote;
     }
-    if (req.body.tourNote != null && req.body.tourNote != '') {
-        update.tourNote = req.body.tourNote;
-    }
     if (req.body.action != null && req.body.action != '') {
         update.action = req.body.action;
     }

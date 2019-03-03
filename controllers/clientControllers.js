@@ -1,6 +1,7 @@
 //require model + cloudinary
-var tourModel = require("../models/tourModel");
-var orderModel = require("../models/orderModel");
+const tourModel = require("../models/tourModel");
+const categoryModel = require("../models/categoryModel");
+const orderModel = require("../models/orderModel");
 
 //home
 exports.home = function (req, res) {
@@ -18,15 +19,18 @@ exports.tourDetail = function (req, res) {
 
 //Tour List
 exports.tourList = function (req, res) {
-    var conditions = {tourCategory: req.body.tourCategory, action: 1};
-    tourModel.find(conditions, function (err, tour) {
-        res.render("client/contentTourList.ejs", {"list": tour});
+    let conditionsTour = {tourCategory: req.body.tourCategory, action: 1};
+    let conditionsCategory = {categoryName: req.body.tourCategory};
+    categoryModel.findOne(conditionsCategory, function (error, category) {
+        tourModel.find(conditionsTour, function (err, tour) {
+            res.render("client/contentTourList.ejs", {"list": tour, "category": category});
+        });
     });
 };
 
 //Tour List all
 exports.tourListAll = function (req, res) {
-    var conditions = { action: 1};
+    var conditions = {action: 1};
     tourModel.find(conditions, function (err, tour) {
         res.render("client/contentTourListAll.ejs", {"list": tour});
     });
