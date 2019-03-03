@@ -1,0 +1,49 @@
+<% include ../headerAdmin.ejs %>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-info">
+                        <h4 class="card-title">Danh sách category đã xóa</h4>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead class="text-warning">
+                            <th>-</th>
+                            <th>Tên</th>
+                            <th>Loại</th>
+                            <th>&nbsp</th>
+                            </thead>
+                            <% for (var i = 0; list.length > i ; i++){ %>
+                                <tbody>
+                                <tr>
+                                    <td style="width: 100px; height: 100px; background-image: url('<%= list[i].categoryImage %>'); background-size: cover">
+                                        &nbsp
+                                    </td>
+                                    <td><%= list[i].categoryName %></td>
+                                    <td><%= list[i].categoryType %></td>
+                                    <td><%= list[i].tourDayGo %></td>
+                                    <td><%= list[i].tourTotalDay %></td>
+                                    <td><%= list[i].tourPrice %></td>
+                                    <td><%= list[i].tourNumberOfSeats %></td>
+                                    <td><%= list[i].tourNumberOfSeatsAvailable %></td>
+                                    <td>
+                                        <form action="/admin/category/delete/detail" method="post">
+                                            <div style="display: none"> id <input type="text" name="categoryId" value="<%= list[i]._id%>"></div>
+                                            <div>
+                                                <input type="submit" class="btn btn-info pull-center" value="Chi tiết">
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            <% } %>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ../footerAdmin.ejs %>

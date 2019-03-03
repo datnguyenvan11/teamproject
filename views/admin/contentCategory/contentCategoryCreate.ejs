@@ -1,0 +1,45 @@
+<% include ../headerAdmin.ejs %>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-info">
+                        <h4 class="card-title">Tạo Category</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="/admin/category/create/save" method="post" enctype="multipart/form-data" style="color: #a3c2d1">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Tên Category</label>
+                                        <input type="text" name="categoryName" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>Loại tour &thinsp;
+                                <input name="categoryType"  type="radio" value="Trong Nước" />Trong nước
+                                <input name="categoryType"  type="radio" value="Nước Ngoài" />Nước ngoài
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Mô tả ngắn</label>
+                                        <textarea name="categoryShortDescription" id="" class="form-control" cols="100%" rows="4"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>Ảnh <input type="file" name="categoryImage" multiple="multiple"></div>
+                            <div>
+                                <input type="submit" class="btn btn-info pull-right" value="Lưu">
+                                <input type="reset" class="btn btn-info pull-right" value="Nhập lại">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ../footerAdmin.ejs %>

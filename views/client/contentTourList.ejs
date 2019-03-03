@@ -160,15 +160,13 @@
 
 <section class="home-slider owl-carousel">
     <div  class="slider-item"
-          style="background-image: url(http://thuthuatphanmem.vn/uploads/2018/05/23/wallpaper-4k-hinh-nen-4k-nuoc-bien-trong-xanh_100015508.jpg); background-size: cover;height: 400px">
+          style="background-image: url(<%= category.categoryImage %>); background-size: cover;height: 400px">
         <div class="overlay"></div>
         <div class="container">
             <div class="row slider-text align-items-center">
                 <div class="col-md-7 col-sm-12 ftco-animate">
-                    <h5 style="color: white"><a style="font-weight: bold; color: white;margin-right: 7px" href="/">TRANG CHỦ </a> TOUR   </h5>
-                    <% for (var i = list.length - 1; i >= list.length - 1; i--){ %>
-                    <h1 class="mb-3" > <%= list[i].tourCategory%>  </h1>
-                    <% } %>
+                    <h5 style="color: white"><a style="font-weight: bold; color: white;margin-right: 7px" href="/"> </a> TOUR   </h5>
+                    <h1 class="mb-3"> <%= category.categoryName %> </h1>
                 </div>
             </div>
         </div>
@@ -224,12 +222,7 @@
         </nav>
     </div>
 </div>
-<p class="fist">Du lịch >> Danh sách tour du lịch
-    <% for (var i = list.length - 1; i >= list.length - 1;i--){ %>
-        <%= list[i].tourCategory %>
-    <% } %>
-</p>
-
+<p class="fist">Du lịch >> Danh sách tour du lịch <%= category.categoryName %></p>
 
 <div class="container-fluid pl-5 pr-5" style="min-height: 100vh">
     <div class="row">
@@ -275,18 +268,14 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 mg-bot10">
                                         <input class="form-control" id="depar" type="date" placeholder="&nbsp &nbsp Ngày khởi hành" style="margin-top: -11px;border-radius: 3px; color: black">
-
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
-
                         <div class="col-lg-8">
                             <div class="name-tour">
-                                <h4 class="h4-text">Danh sách tour du lịch Đà Nẵng - Cây Cầu Vàng</h4>
-                                <p style="font-weight: bold; margin-left: 20px;"><p><p><p><p>Đ&agrave; Nẵng nằm giữa ba di sản thế giới: cố đ&ocirc; Huế, phố cổ Hội An v&agrave; th&aacute;nh địa Mỹ Sơn. Đ&agrave; Nẵng c&ograve;n c&oacute; nhiều danh thắng tuyệt đẹp say l&ograve;ng du kh&aacute;ch như Ngũ H&agrave;nh Sơn, B&agrave; N&agrave;, b&aacute;n đảo Sơn Tr&agrave;, đ&egrave;o Hải V&acirc;n, s&ocirc;ng H&agrave;n thơ mộng v&agrave; cầu quay S&ocirc;ng H&agrave;n &ndash; niềm tự h&agrave;o của th&agrave;nh phố, v&agrave; biển Mỹ Kh&ecirc; đẹp nhất h&agrave;nh tinh.<br />Tại Đ&agrave; Nẵng Bạn c&oacute; thể thăm quan c&aacute;c điểm đến sau B&agrave; N&agrave;, Đ&agrave; Nẵng, C&ugrave; Lao Ch&agrave;m, Sơn Tr&agrave; ,<br /><br /><br /><br /></p></p></p><br /><br />
+                                <h4 class="h4-text">Danh sách tour du lịch <%= category.categoryName %></h4>
+                                <p style="font-weight: bold; margin-left: 20px;"><p><p><p><p> <%= category.categoryShortDescription %> <br /><br /><br /><br /></p></p></p><br /><br />
                             </div>
                         </div>
                     </div>
