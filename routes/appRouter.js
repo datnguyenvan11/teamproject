@@ -21,6 +21,8 @@ exports.routing = function (app) {
     app.get("/rate", clientController.rate);
     //contact
     app.get("/contact", clientController.contact);
+    app.get("/order/succses", clientController.dattoursuccses);
+
 
 
 //Admin Page

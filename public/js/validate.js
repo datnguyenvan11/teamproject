@@ -64,12 +64,7 @@ var validato1r = $('#form3').validate({
         person: {
             required: true,
         },
-        children: {
-            required: true,
-        },
-        trenho: {
-            required: true,
-        },
+
 
         usernumber: {
             required: true,
@@ -97,15 +92,46 @@ var validato1r = $('#form3').validate({
         person: {
             required: '* ',
         },
-        children: {
-            required: '* ',
-        },
-        trenho: {
-            required: '* ',
-        },
 
         usernumber: {
             required: '* ',
         },
     }
+});
+
+var validator1=$('#contactForm2').validate({
+    rules: {
+        hoten2: {
+            required: true,
+
+            maxlength: 100
+        },
+        email2: {
+            required: true,
+            email: true
+        },
+        noidung: {
+            required: true,
+        },
+
+    },
+    messages: {
+        hoten2: {
+            required: '* nhập họ tên',
+            maxlength: '* Ten qua dai ',
+        },
+
+        email2: {
+            required: "* nhập email",
+            email: '* email đúng định dạng',
+
+        },
+
+        noidung: {
+            required: '* nhập nội dung .',
+        }
+
+    },
+
+
 });
