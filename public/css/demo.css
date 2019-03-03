@@ -4,6 +4,9 @@
   position: relative;
   width: 100%;
 }
+.error{
+  color: red;
+}
 
 .tim-typo .tim-note {
   bottom: 5px;
